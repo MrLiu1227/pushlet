@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<something-else-entirely>
+	<proxool>
+		<alias>proxool_dict</alias>
+		<driver-url>jdbc:dm://10.13.97.14:5238/CSSOFFICE40</driver-url>
+		<driver-class>dm.jdbc.driver.DmDriver</driver-class>
+		<driver-properties>
+			<property name="user" value="CSSOFFICE40" />
+			<property name="password" value="1234567890" />
+		</driver-properties>		
+		<maximum-connection-count>100</maximum-connection-count>
+		<minimum-connection-count>2</minimum-connection-count>
+		<!-- min active conn -->
+		<prototype-count>5</prototype-count>
+		<!-- conn queue -->
+		<simultaneous-build-throttle>5</simultaneous-build-throttle>
+		<!-- proxool sleep time auto detroy ms-->
+		<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+		<house-keeping-test-sql>select CURRENT_DATE from dual</house-keeping-test-sql>		
+		<test-before-use>true</test-before-use>
+		<test-after-use>true</test-after-use>
+	</proxool>
+</something-else-entirely>

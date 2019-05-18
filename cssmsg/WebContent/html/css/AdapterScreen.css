@@ -1,0 +1,455 @@
+@media screen and (min-width:900px) and (max-width: 1300px){
+	.login-Logo {
+	  top: 28%;
+      left: 20%;
+	}
+}
+ @media screen and (min-width:1301px) and (max-width:1366px){
+    #morphsearch-content{
+		margin-top: 0px;
+	 	height:470px; 
+		width:100%;
+		position: relative;
+		overflow: auto;
+	}
+	.cont_img_back_ > img{
+	  margin-left: -429px;
+	  margin-top: -9px;
+	}
+        .login-Logo{
+         width: 310px;
+         height: 240px;
+         position: absolute;
+         top: 33%;
+    	 left: 25%;
+       }
+	.cont_form_login>#username,.cont_form_login>#password{
+	      left: 130px;
+	}
+	.btn_login2{
+	   left: 142px;
+	}
+	.rightDiv>#messageButton>#byTime>strong{
+		position: absolute;
+		top: 23px;
+		left: 58px;
+		}
+	.cont_form_login > h2{
+	    margin-left: 4px;
+	}
+	.rightDiv>#messageButton>#byKind>strong{
+		position: absolute;
+		top: 23px;
+		left: 172px;
+	}
+	
+    .messageTextArea {
+	    position: absolute;
+	    float: left;
+	    left: 26%;
+	    text-align: left;
+	    top: 14px;
+    }
+	.deleteMessage{
+	position: absolute;
+	top: 17px;
+	left: -7px;
+	}
+	.deleteMessage>span{
+	  font-size:14px;
+	}
+	.deleteMessage>img{
+	  position:absolute;
+	  top:0px;
+	  left:270px;
+	  width:20px;
+	  height:20px;
+	}
+	.cont_back_info{
+	   top:-116px;
+	}
+	.cont_ba_opcitiy{
+		top:-56px;
+	}
+	.rightDiv{
+	  width: 320px;
+	  margin-left: -30px;
+	}
+	.cont_login>.cont_form_login{
+	  top: -29px;
+	}
+	#messageList{
+	 width:320px;
+	}
+	.messageSwitch{
+	  width:36%;
+	}
+        #showMessage{
+          height:630px;
+        }
+	/* µÇÂ¼ */
+	.login{
+		width: 33.5%;
+		height: 46%;
+		background-color: rgba(204,204,204,.6);
+		border-radius: 10px;
+		position: absolute;
+		
+        }
+     .login-username{
+            width: 74.5%;
+			height:45px;
+			background-color: #fff;
+			border-radius: 10px;
+			position:absolute;
+			top:20.7%;
+			left:12.9%;
+       }
+      .login-username i,.login-password i{
+			display: block;
+			width: 10%;
+			height: 45px;
+			float: left;
+			font-size: 28px;
+			line-height: 45px;
+			text-align: center;	
+			color: #a0a0a0;       
+        }
+        .login-username input,.login-password input{
+			display: block;
+			float: left;
+			width: 90%;
+			height: 45px;
+			line-height: 45px;
+			border: none;
+			font-size: 22px;
+			border-radius: 0 10px 10px 0;
+			text-align: left;
+			text-indent: 10px;
+			outline: mediumaquamarine;
+			padding: 1px 0;
+        }
+        .login-password{
+            width: 74.5%;
+			height:45px;
+			background-color: #fff;
+			border-radius: 10px;
+			position:absolute;
+			top:44%;
+			left:12.9%;
+        }
+        .loginBtn{
+			width: 74.5%;
+			height: 45px;
+			line-height: 45px;
+/* 			border-radius: 10px; */
+			background-color: #188dfb;
+			position: absolute;
+			top: 67%;
+			left: 12.9%;
+/* 			color: white;
+			font-size: 23px;
+			text-align: left;
+			cursor: pointer; */
+        }
+       .wrapper{
+         height: 698px;
+         margin: 0 auto;
+       }
+       #messageButton{
+        height: 5%;
+      }
+      .messageSwitch{
+        margin-top: 17px;
+        margin-bottom: 20px;
+        height: 32px;
+
+       }
+       #bottomUl.sortable.grid {
+          width: 510px;
+          height: 100px;
+         /*border: 1px solid red;*/
+          z-index: 2000;
+          margin-top:28px;
+        }
+        .bottom_box{
+          margin-left: 30%;
+         }
+	/* ´ý°ìÏµÍ³ */
+	.box>.box-left>P{
+	   font-size: 16px;
+	}
+	.box>.box-left>P>i{
+	   right: 28px;
+	}
+	.box-title > .box-title-input > i{
+	  right: 90px;
+	}
+	.close span{
+	 width: 17%;  
+	}
+	.history-title-content li:nth-child(2), .history-title-content li:nth-child(3) {
+	    width: 26%;
+	}
+	.history-title li, .history-title-content li {
+	    width: 20%;
+	    height: 20px;
+	    line-height: 20px;
+	    font-size: 14px;
+	    list-style: none;
+	    margin-left: 10px;
+	    text-align: center;
+	}
+	.history-title > ul, .history-title-content ul {
+	    width: 100%;
+	    margin-top: 15px;
+	    display: flex;
+	}
+	.history-title li:nth-child(2), .history-title li:nth-child(3) {
+	    width: 27%;
+	}
+	.history-title-content li:nth-child(4) span {
+	    width: 30px;
+	    height: 19px;
+	    border: 1px solid #767676;
+	    display: inline-block;
+	    line-height: 19px;
+	}
+	.box-title > .box-title-input > input{
+	   margin-left: 112px;
+	}
+	.box-rightStyle-content{
+	  width: 19%;
+	}
+	.box-content-top{
+	    height: 35px;
+		line-height: 35px;
+	 }
+	 .box-content-middle{
+	     height: 35px;
+	     line-height:35px;
+	} 
+	 .box-content-top > div{
+	     height: 35px;
+	     line-height: 35px;
+	 }
+	 .box-content-middle > div{
+	      height: 35px;
+	     line-height:35px; 
+	     font-size: 15px;
+	 }
+	 .cur-inputTime{
+	    height:30px;
+	    line-height:30px;
+	 }
+	 .cur-inputTime span{
+	     margin-left: 23px;
+		 font-size: 14px;
+	 }
+	 .box-content-text{
+	     height:212px;
+	 }
+	 .box-content-text-cur{
+	    width: 80%;
+		height: 192px;
+		margin: 10px auto;
+		border: 1px solid #dbdbdb;
+		border-radius: 10px;
+	 }
+	 .cur-middle {
+	    width: 100%;
+	    height: 160px;
+	 }
+	 .cur-middle-text {
+	    display: inline-block;
+	    width: 80%;
+	    height: 92px;
+	    margin-left: 10%;
+	    text-decoration: none;
+	    color: #2a2a2d;
+	    letter-spacing: 0;
+	    font-size: 14px;
+	    letter-spacing: 1px;
+	     line-height: 15px;
+	}
+	.sender {
+	    width: 80%;
+	    margin-left: 10%;
+	    height: 30px;
+	    border-bottom: 1px solid #7f8080;
+	    line-height: 30px;
+	    color: #5c5c5d;
+	    font-size: 15px;
+	    text-align: center;
+    }
+    .cur-bottom {
+	    width: 80%;
+	    margin-left: 10%;
+	    height: 30px;
+	    margin-top: 0px;
+	    line-height: 30px;
+	}
+	.cur-bottom-text {
+	    width: 60%;
+	    height: 80%;
+	    border: 1px solid #64a1ed;
+	    border-radius: 30px;
+	    margin-left: 53px;
+	    margin-top: -30px;
+	    cursor: pointer;
+	}
+	.cur-bottom-text > i {
+	    font-size: 24px;
+	    color: #5498eb;
+	    margin-left: 14px;
+	    margin-top: -4px;
+	    display: inline-block;
+	}
+	.cur-bottom-text > span {
+	    margin-top: -76px;
+	    display: inline-block;
+	    width: 40px;
+	    height: 100%;
+	    vertical-align: middle;
+	    font-size: 15px;
+	    margin-left: 40px;
+	    color: #5498eb;
+	}
+	.box-content-top .box-content-topText2{
+	   text-align: left;
+	   text-indent: 5px;
+	}
+	.box-content-middle .box-content-middleText2>a{
+	   display: inline-block;
+		text-indent: 5px;
+	}
+	.page-content > .pageMessage{
+	  width: 174px;
+	}
+	.page-content > div:first-child{
+	   margin-left: 80px;
+	}
+	.wrapper-middle ul.sortable.grid{
+	  padding-top:0;
+	  height: 610px;
+	}
+	#messageList{
+       height: 566px;
+    }
+    .messageContent{
+       width:188px;
+    }
+    .wrapper .wrapper-footer{
+    	bottom: 20px;
+    }
+     .swiper-container{
+    	width:100%;
+    	height: 100%;
+    }
+    .swiper-container img{
+    	width:100%;
+    	height: 100%;
+    }
+    .wrapper-middle .sortable.grid li {
+	    line-height: 90px;
+	    width: 110px;
+	    height: 90px;
+	    margin: 25px 25px 14px 25px;
+	    margin-top: 70px;
+	}
+	.img-index{
+		bottom: 40px;
+	}
+}
+ 
+ @media screen and (min-width:1367px) and (max-width: 1919px){
+      #morphsearch-content{
+		margin-top: 0px;
+	 	height:825px; 
+		width:100%;
+		position: relative;
+		overflow: auto;
+      }
+      .rightDiv>#messageButton>#byTime>strong{
+			position: absolute;
+			top: 30px;
+			left: 20%;
+		}
+	.rightDiv>#messageButton>#byKind>strong{
+		position: absolute;
+		top: 30px;
+		left: 63%;
+	}
+	.deleteMessage{
+	    position: absolute;
+	 	top: 10px;
+		left: 5px;
+	}
+	
+	.deleteMessage>span{
+	  font-size:14px;
+	}
+	
+}
+@media screen and (min-width:1920px){
+      #morphsearch-content{
+		margin-top: 0px;
+	 	height:825px; 
+		width:100%;
+		position: relative;
+		overflow: auto;
+      }
+      .cont_form_login > h2{
+	  margin-left:10px;
+	 }
+      .rightDiv>#messageButton>#byTime>strong{
+			position: absolute;
+			top: 31px;
+			left: 80px;
+		}
+	.rightDiv>#messageButton>#byKind>strong{
+		position: absolute;
+		top: 31px;
+		left: 244px;
+	}
+	.deleteMessage{
+	 position: absolute;
+	 top: 13px;
+	 left: 45px;
+	}
+	.deleteMessage>span{
+	  font-size:14px;
+	}
+	.deleteMessage>img{
+	  position:absolute;
+	  top:0;
+	  left:290px;
+	  width:20px;
+	  height:20px;
+	  z-index:500;
+	}
+	.cont_form_login>#username,.cont_form_login>#password{
+	      left: 130px;
+	}
+	.btn_login2{
+	   left: 142px;
+	}
+	.cont_form_login{
+	  top:68px;
+	}
+	.box-img > i{
+	  margin-left: 112px;
+	}
+	.box-title > .box-title-input > i{
+	    font-size: 56px;
+		position: absolute;
+		top: 2px;
+		right: 68px;
+		color: #A0C5F1;
+		cursor: pointer;
+	}
+	 .deskInit > h1 {
+	    top: 48%;
+	    left: 35%;
+    }
+}

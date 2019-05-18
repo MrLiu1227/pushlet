@@ -1,0 +1,243 @@
+button.close {
+	float: right;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 1;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	filter: alpha(opacity = 20);
+	opacity: .2;
+}
+
+button.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	filter: alpha(opacity = 50);
+	opacity: .5;
+}
+
+button.close {
+	-webkit-appearance: none;
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+}
+
+.modal-open {
+	overflow: hidden;
+}
+
+.modal.fade .modal-dialog {
+	-webkit-transition: -webkit-transform .3s ease-out;
+	-o-transition: -o-transform .3s ease-out;
+	transition: transform .3s ease-out;
+	-webkit-transform: translate(0, -25%);
+	-ms-transform: translate(0, -25%);
+	-o-transform: translate(0, -25%);
+	transform: translate(0, -25%);
+}
+
+.modal.in .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.modal-header .close {
+	margin-top: -2px;
+}
+
+.modal-title {
+	margin: 0;
+	line-height: 1.42857143;
+}
+
+.modal-footer {
+	padding: 15px;
+	text-align: right;
+	border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer .btn {
+	margin-bottom: 0;
+	margin-left: 5px;
+}
+
+.modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after {
+	display: table;
+	content: " ";
+}
+
+.modal-header:after, .modal-footer:after {
+	clear: both;
+}
+
+.modal {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	_height: 2999px;
+	_width: 2999px;
+	overflow: hidden;
+}
+
+.modal-mask {
+	position: absolute;
+	_height: 2999px;
+	_width: 2999px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	background: #888;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/*非常关键，保证窗体大小自适应 */
+.jqmodal .modal-dialog {
+	position: relative;
+	width: auto;
+	_width: 100px;
+	_height: 50px;
+	*width: 100px;
+	*height: 50px;
+	display: inline-block;
+}
+
+.jqmodal .modal-content {
+	margin: 0 auto;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #999;
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: 4px;
+	outline: 0;
+	-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+
+.jqmodal .modal-title {
+	display: inline-block;
+	font-size: 14px;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+
+.jqmodal .modal-dialog .dialogIcon {
+	float: left;
+	margin-top: -10px;
+	margin-rigth: 10px;
+	margin-bottom: 5px;
+}
+
+.jqmodal .modal-header {
+	_display: inline-block;
+	padding: 15px;
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.jqmodal .modal-body {
+	position: relative;
+	padding: 15px;
+	margin: 0 auto;
+	/* 	white-space: nowrap;*/
+	text-overflow: ellipsis;
+	overflow: auto;
+	_display: inline-block;
+	text-overflow: ellipsis
+}
+
+.tip_dialog  .modal-body, .confirm_dialog  .modal-body, .alert_dialog .modal-body {
+	padding-top: 30px;
+}
+
+.confirm_dialog .modal-dialog .bootstrap-dialog-message {
+	text-align: left;
+	vertical-align: middle;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.modal-dialog .dialogIcon i {
+	width: 60px;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 0px;
+}
+
+.confirm_dialog .modal-dialog .dialogIcon i {
+	color: #f39c12;
+}
+
+.alert_dialog .modal-dialog .dialogIcon i {
+	color: #f56954;
+}
+
+.tip_dialog .modal-dialog .dialogIcon i {
+	color: #00a65a;
+}
+
+.tip_dialog  .modal-dialog, .confirm_dialog  .modal-dialog, .alert_dialog .modal-dialog {
+	min-width: 350px;
+	_width: 350px;
+}
+
+.jqmodal .modal-body .form-horizontal .control-group {
+	margin: 10px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.jqmodal .modal-body .form-horizontal .control-group:first-of-type {
+	margin-top: 0px;
+}
+
+.jqmodal .modal-body  .form-horizontal .control-label {
+	width: 100px;
+}
+
+.jqmodal .modal-body .form-horizontal .controls {
+	margin-left: 110px;
+}
+
+.jqmodal .table {
+	margin-bottom: 10px;
+}
+
+.jqmodal textarea {
+	resize: none
+}
+
+.jqmodal .table.editTable {
+	margin-bottom: 0px;
+}
+
+.jqmodal .content-sm, .jqmodal .content {
+	padding: 0px;
+	margin: 0px;
+}
+
+.jqmodal .modal-body .set-btn {
+	padding-top: 25px;
+	text-align: right;
+}
+
+.jqmodal .modal-frame {
+	width: 600px;
+	height: 500px;
+	margin: 0; padding0;
+	overflow: hidden;
+}

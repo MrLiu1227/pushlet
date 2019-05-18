@@ -1,0 +1,25 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="slw.grid.full-2.2.js">
+    <auto value="0" />
+    <sourcefile path="..\src\slw.grid.js" />
+    <sourcefile path="..\src\slw.grid.text.js" />
+    <sourcefile path="..\src\slw.grid.read.js" />
+    <sourcefile path="..\src\slw.grid.dict.js" />
+    <sourcefile path="..\src\slw.grid.checkbox.js" />
+    <sourcefile path="..\src\slw.grid.date.js" />
+    <sourcefile path="..\src\slw.grid.tree.js" />
+    <sourcefile path="..\src\slw.grid.color.js" />
+    <sourcefile path="..\src\slw.grid.other.js" />
+    <sourcefile path="..\src\slw.grid.ctxmenu.js" />
+    <sourcefile path="..\src\slw.grid.history.js" />
+    <sourcefile path="..\src\slw.grid.formula.js" />
+    <sourcefile path="..\src\slw.grid.selection.js" />
+    <sourcefile path="..\src\slw.grid.border.js" />
+    <sourcefile path="..\src\slw.grid.keyboard.js" />
+    <sourcefile path="..\src\slw.grid.clipboard.js" />
+    <sourcefile path="..\src\slw.grid.data.js" />
+    <sourcefile path="..\src\slw.grid.config.js" />
+    <sourcefile path="..\src\slw.grid.resizer.js" />
+    <sourcefile path="..\src\slw.grid.validator.js" />
+</combinefile>
+</jscompress>

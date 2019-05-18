@@ -1,0 +1,31 @@
+.theme-dark.slider-wrapper {
+	background: #222;
+  padding:10px 10px 5px 10px;;
+}
+.theme-dark .cssSlider img {
+	width:100%;
+}
+.theme-dark .css-nav{
+	float:left;
+	padding-top:5px;
+}
+.theme-dark .css-nav a {
+	float:left;
+	background:url(bullets.gif) no-repeat 0 0;
+	width:10px;
+	height:10px;
+	cursor:pointer;
+	text-indent:-9999px;
+}
+.theme-dark .css-nav a.active {
+	background-position:0 -18.5px;
+}
+.theme-dark .css-href{
+	float:right;
+	padding-top:3px;
+}
+.theme-dark .css-href a{
+	font-size:12px;
+	color:#fff;
+	text-decoration: none;
+}

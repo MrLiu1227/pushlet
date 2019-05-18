@@ -1,0 +1,14 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="cssbootstrap.js">
+<sourcefile path=".\src\dropdown.js" />
+<sourcefile path=".\src\tab.js" />
+<sourcefile path=".\src\jqtab.js" />
+<sourcefile path="..\jqztree\jqztree.js" />
+<sourcefile path="..\jqztree\jqdropdownztree.js" />
+<sourcefile path="..\jqsplit\jqsplit.js" />
+<sourcefile path="..\jqsplittable\jqsplittable.js" />
+<sourcefile path="..\jqdialog\jqdialog.js" />
+<sourcefile path="..\jqinput\maskedinput.js" />
+<sourcefile path="..\jqinput\textarea.js" />
+</combinefile>
+</jscompress>

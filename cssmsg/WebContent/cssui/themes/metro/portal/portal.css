@@ -1,0 +1,544 @@
+/*--------portal------------*/
+#layoutSection {
+	overflow: hidden;
+	margin:auto;
+	min-height:400px;
+}
+.connected{
+	float: left;
+	border: 1px dashed #CCC;
+	margin: 5px;
+	padding: 0px;
+	width: 100%;
+	min-height:20px;
+}
+.connected li.sortable-placeholder {
+	height:150px;
+}
+.ptNoBorder .connected{
+	border: 0px dashed #fff;
+	margin: 0 5px 0 5px;
+	-webkit-touch-callout: auto;
+	-webkit-user-select: auto;
+	-khtml-user-select: auto;
+	-moz-user-select: auto;
+	-ms-user-select: auto;
+	user-select: auto;
+}
+.ptlDiv{
+	width:100%;
+	float:left;
+	clear:both;
+}
+.ptNoBorder{
+	padding-top:15px;
+}
+.plLayoutAdmin{
+	border: 1px solid #eee;
+	width:600px;
+	height:400px;
+	overflow-y:scroll;
+}
+.plLayoutAdmin li{
+	list-style: none;
+}
+.connected > li{
+	font-size:14px;
+	list-style: none;
+	border: 1px solid #eee;
+	margin:0px 0px 10px 0px;
+	min-height:25px;
+}
+.ptNoBorder .connected > li{
+	margin:0px 0px 10px 0px;
+}
+.connected .ptLoading{
+	height: 16px;
+	overflow: hidden;
+	margin: 10px auto;
+	padding-left:20px;
+	width:50px;
+	background: url(../images/loading.gif) no-repeat scroll 0 0 transparent;
+}
+.connected input[type="checkbox"]{
+	margin-bottom: 15px;
+	}
+.connected input{
+	index:
+}
+#newPage{
+	float:left;
+	padding-top:9px;
+}
+#manPage{
+	float:right;
+	padding-top:9px;
+}
+#newRow{
+	padding:5px 8px 5px 5px;
+	width: 360px;
+	float:right;	
+}
+#newRow a{
+	text-decoration: none;
+	border: 1px dashed #fff;
+	background: #fff;
+	padding:3px 3px 4px 3px;
+	float:right;
+}
+#newRow a:hover{
+	padding:3px 3px 4px 3px;
+	border: 1px solid #CCC;
+	color:#000;
+	background: #FFFFcc;
+}
+.ptSortable li{
+	cursor:pointer;
+}
+.ptSortable li.sortable-placeholder {
+	border: 1px dashed #CCC;
+	height:30px;
+	width: 80px;
+}
+.ptEditor{
+	float:left;
+	margin-top:5px;
+}
+.ptEditor td{
+	cursor:pointer;
+}
+#portletTable th,#portletTable td{
+	height:22px;
+}
+/*--------layout-----------*/
+.lySortable li.sortable-placeholder {
+	border: 1px dashed #CCC;
+	height:30px;
+	width:709px;
+	margin:5px;
+}
+.lySortable .connected {
+	float: left;
+	border: 1px solid #ddd;
+	margin:5px;
+	height:27px;
+}
+.lyMenu{
+	float:right;
+	padding:6px 5px 0px 5px;
+	cursor:pointer;
+}
+.lyTip li{
+	font-size:12px;
+	float: left;
+	border: 1px solid #ddd;
+	min-height:18px;
+	width:50px;
+	margin:5px 0px 0px 14px;
+	padding-top:4px;
+	text-align:center;
+}
+.highlight,.connected.highlight {
+	font-weight:bold;
+}
+.connected.currently {
+	border: 1px dashed red;
+}
+/*--------component------------*/
+.plTools{
+	right:0px;
+	clear:both;
+	text-align:right;
+	margin-right:3px;
+	cursor:pointer;
+	background:#fff;
+	position: relative;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.plTools .plEditor{
+	background:#fff;
+	line-height: 10px;
+}
+.plEditor span{
+	margin-right:3px;
+}
+.plHandle{
+	background-color: #f8f8f8;
+	border: 1px solid #ededed;
+	height: 37px;
+	line-height: 35px;
+}
+.ptNoBorder .plHandle{
+	cursor:default;
+}
+.plContent{
+	width:100%;
+	min-height:50px;
+	margin-top: 12px;
+}
+.plPadding{
+	padding:0px;
+}
+.plName{
+	float:left;
+	padding: 0 8px;
+	font-weight:bold;
+	font-size:14px;
+}
+.plCbx{
+	float:left;
+	padding:5px 0px 0px 5px;
+	cursor:default;
+}
+.plMenu{
+	float:right;
+	padding: 1px 5px 2px 2px;
+	cursor:pointer;
+}
+.height13em{
+	font-size:13px;
+	line-height:2.2em;
+	padding:5px 10px 5px 5px;
+}
+
+.plBox{
+	border:0px solid #eee;
+}
+/*--- no title control ---*/
+.ptNoBorder .plHandle.hidetrue{
+	display:none;
+}
+.ptNoBorder .plBox.noBordertrue{
+	border:none;
+}
+.ptNoBorder .plBox.noBordertrue .plPadding{
+	padding:0px;
+}
+
+/*--- plTitle lable ---*/
+.plName .plTitle_tab {
+	float: left;
+	height: 22px;
+	padding: 0 0 0 0px;
+}
+.plName .plTitle_tab ul {
+	float: left;
+}
+.plName .plTitle_tab li {
+	min-height:21px;
+	height: 21px;
+	float: left;
+	padding: 8px 5px 0 5px;
+	margin: 0 2px 0 2px;
+	border-top: 1px solid #D1D1D1;
+	border-left: 1px solid #D1D1D1;
+	border-right: 1px solid #D1D1D1;
+	cursor:pointer;
+}
+.plName .plTitle_tab .current{
+	background:#fff;
+	border-bottom: 1px solid #fff;
+}
+/*-------- feed component ----------*/
+.feedDate{
+	font-family:georgia, times new roman,serif;
+	font-size:13px;
+}
+.feedSplit{
+	height: 5px;
+}
+.feedDesc,.feedTitle,.feedDate  {
+	font-size: 13px;
+	padding-bottom: 2px;
+	line-height: 1.5em;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.feedDesc ol li{
+	list-style: decimal;
+	border:none;
+}
+.feedDesc ul{
+	list-style: inside; 
+} 
+.feedDesc ul li{
+	padding-left:20px;
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: inside;
+	border:none;
+}
+/*-------- image comonent ----------*/
+.imageMenu{
+	float:right;
+	padding:2px;
+	cursor:pointer;
+}
+/*-------- richtext commponent ----------*/
+.richtextDesc p,.richtextDesc div,.richtextDesc td,.richtextDesc span{
+	word-break: break-all;
+	word-wrap: break-word;
+	font-size:13px;
+	line-height:1.7em;
+}
+.frameDesc{
+	width:100%;
+}
+
+.richtextDesc ol li{
+	list-style: decimal;
+	border:none;
+}
+.richtextDesc ul{
+	list-style: inside; 
+} 
+.richtextDesc ul li{
+	padding-left:20px;
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: inside;
+	border:none;
+}
+
+/*-------- bbs component ----------*/
+.list-e1 {
+	padding: 0px;
+	margin:0px;
+}
+.list-e1 dt {
+	background: url(../images/list_dot.png) no-repeat 5px 15px;
+	margin:0px;
+	padding-left:1em;
+	border:none;
+	line-height:2.32em;
+}
+.list-e1 dt a{
+	font-size: 14px;
+    font-weight: normal;
+}
+.list-e1 .num {
+	float: right;
+	padding-right: 10px;
+	color:#999999;
+}
+.num {
+	font-family: georgia, Verdana, Geneva, sans-serif;
+	color: #2A5D94;
+}
+
+.list-e1 dt.top1,.list-e1 dt.top2,.list-e1 dt.top3,.list-e1 dt.top4,.list-e1 dt.top5,.list-e1 dt.top6,.list-e1 dt.top7,.list-e1 dt.top8,.list-e1 dt.top9,.list-e1 dt.top10 {
+	padding-left:1.8em;
+	margin:0px;
+	border:none;
+}
+.list-e1 dt.top1{
+	background: url(../images/num/pic1.gif) 0px no-repeat;
+}
+.list-e1 dt.top2{
+	background: url(../images/num/pic2.gif) 0px no-repeat;
+}
+.list-e1 dt.top3{
+	background: url(../images/num/pic3.gif) 0px no-repeat;
+}
+.list-e1 dt.top4{
+	background: url(../images/num/pic4.gif) 0px no-repeat;
+}
+.list-e1 dt.top5{
+	background: url(../images/num/pic5.gif) 0px no-repeat;
+}
+.list-e1 dt.top6{
+	background: url(../images/num/pic6.gif) 0px no-repeat;
+}
+.list-e1 dt.top7{
+	background: url(../images/num/pic7.gif) 0px no-repeat;
+}
+.list-e1 dt.top8{
+	background: url(../images/num/pic8.gif) 0px no-repeat;
+}
+.list-e1 dt.top9{
+	background: url(../images/num/pic9.gif) 0px no-repeat;
+}
+.list-e1 dt.top10{
+	background: url(../images/num/pic10.gif) 0px no-repeat;
+}
+.ui_content {
+  font-weight: normal;
+  zoom: 1;
+}
+.imgSection{
+	width: 50px;
+	height:50px;
+	border: solid 1px #E0E0E0;
+	background-color: #FFF;
+	padding: 2px;
+}
+/*-------- 重新定义 ----------*/
+.tbl_1{
+	border: 1px solid #ededed;
+	border-top: 0px;
+	padding: 0px;
+}
+.website > i, .website > .tabs i{
+	background-image: url(../images/portal.png);
+}
+.website{
+	padding: 15px;
+}
+.website > .tabs {
+	border: 1px solid #ededed;
+	height: 38px;
+}
+.website > .tabs ul {
+	float: left;
+}
+.website > .tabs li{
+	float: left;
+	text-align: center;
+	line-height: 38px;
+	border-right: 1px solid #ededed;
+}
+.website > .tabs li a {
+	display: inline-block;
+	padding: 0px 20px;
+	text-decoration: none;
+}
+.website > .tabs li a:hover{
+	background-color: #41baf2;
+	color: #ffffff;
+}
+.website > .tabs .cur a{
+	background-color: #317caf;
+	color: #ffffff;
+}
+.website > .tabs .cur a:hover{
+	background-position: 0px -200px;
+	background-color: #317caf;
+	color: #ffffff;
+}
+.website > .tabs .config{
+	float: right;
+	display: inline-block;
+	line-height:38px;
+	padding: 0 15px;
+	text-decoration: none;
+	border-left: 1px solid #ededed;
+} 
+.website > .tabs .config:hover{
+	background-color: #41baf2;
+	color: #ffffff;
+}
+.website > .tabs i{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.website > .tabs .config i{
+	background-position: 0px -22px;
+	margin-right: 3px;
+}
+.website > .tabs .config:hover i{
+	background-position: -40px -22px;
+}
+.website > .tabs .amend{
+	background-color: #317caf;
+}
+.website > .tabs .amend a{
+	color: #ffffff;
+}
+.website > .tabs .amend a:hover{
+	background: none;
+	color: #ffffff;
+}
+.website > .tabs .add a:hover{
+	background: none;
+	color: #333333;
+}
+.website > .tabs .amend i{
+	margin-right: 10px;
+	cursor: pointer;
+}
+.website > .tabs .amend i.edit{
+	background-position: 0px -47px;
+}
+.website > .tabs .amend i.del{
+	background-position: 0px -74px;
+}
+.website > .tabs .add i{
+	background-position: 0px -101px;
+	margin-right: 5px;
+}
+.website .mod {
+	margin-top: 20px;
+}
+.website .mod .title{
+	background-color: #f8f8f8;
+	border: 1px solid #ededed;
+	border-bottom: 0;
+	height: 37px;
+	line-height: 35px;
+}
+.website .mod .title .more{
+	float: right;
+}
+.website .mod .title a{
+	text-decoration: none;
+}
+.website .mod .title .tabs li{
+	float: left;
+	height: 37px;
+	line-height: 35px;
+	border-right: 1px solid #ededed;
+	padding: 0 15px;
+}
+.website .mod .title .tabs .cur{
+	background-color: #ffffff;
+	position: relative;
+	bottom: -1px;
+}
+.website .mod .con{
+	border: 1px solid #ededed;
+	min-height: 50px;
+}
+.website .mod .con{
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+.website .mod .con li{
+	line-height: 32px;
+}
+.website .mod .con li a{
+	display: block;
+	text-decoration: none;
+	padding: 0 15px;
+}
+.website > .mod > .con > li > a:hover{
+	background-color: #41baf2;
+	color: #ffffff;
+}
+.website > .mod > .con > li > a > i{
+	display: inline-block;
+	background-image: url(../images/warp.png);
+	background-repeat: no-repeat;
+	background-position: 0 -248px;
+	height: 10px;
+	width: 10px;
+	margin: 0 2px;
+}
+.website > .mod > .con > li > a:hover > i{
+	background-position: -37px -248px;
+}
+.website .mod .con li a .data{
+	color: #cccccc;
+}
+.website .mod .con li a:hover .data{
+	color: #ffffff;
+}
+.error_color, .error_color:link, .error_color:visited, .MIB_linkal .error_color:link, .MIB_linkal .error_color:visited {
+	color: red;
+}
+.selImg{
+	margin-bottom:0px;
+	
+}

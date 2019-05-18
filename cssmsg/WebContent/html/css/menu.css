@@ -1,0 +1,81 @@
+.epMenu {
+    width: 120px;
+    background: #f0f0f0;
+    position: fixed;
+    z-index:1;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 2px 2px 2px #807878;
+}
+
+.epMenu a {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 15px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #fff;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    cursor: default;
+}
+
+.epMenu a:hover {
+    background: #fff;
+}
+
+.small_pic {
+    float: left;
+    width: 32%;
+    height: 40%;
+    margin-top: 10px;
+    margin-left: 6px;
+    overflow: hidden;
+}
+
+.small_pic img {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.small_pic img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.bottomBtn{
+	width: 50px;
+	height: 30px;
+	line-height: 30px;
+	float: right;
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	left: 676px;
+}
+.btn{
+    width: 80px;
+	height: 30px;
+	display: block;
+	float: left;
+	margin-left: 15px;
+	text-align: center;
+	background: rgb(66, 133, 244);
+	border-radius: 5px;
+	margin-left: 108px;
+}
+.btn:hover{
+    width:80px;
+    height:30px;
+    display: block;
+    float: left;
+    margin-left: 15px;
+    text-align: center;
+    background: #509bff;
+    color: #1a258e;
+    border-radius: 5px;
+    margin-left: 108px;
+}
+.clear{clear: both}

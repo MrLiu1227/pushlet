@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.css.app.personalmsg.model.PersonalMsg" table="PERSONAL_MSG">
+ 
+        <id name="uuid" type="java.lang.String">
+            <column name="UUID" length="50" />
+             <generator class="assigned" />
+        </id>
+        <property name="msgName" type="java.lang.String">
+            <column name="MSG_NAME" length="50" />
+        </property>
+        <property name="msgUrl" type="java.lang.String">
+            <column name="MSG_URL" length="1000" />
+        </property>
+        <property name="msgType" type="java.lang.String">
+            <column name="MSG_TYPE" length="50" />
+        </property>
+        <property name="msgContent" type="java.lang.String">
+            <column name="MSG_CONTENT" length="500" />
+        </property>
+        <property name="msgKeyWord" type="java.lang.String">
+            <column name="MSG_KEY_WORD" length="50" />
+        </property>
+        <property name="sender" type="java.lang.String">
+            <column name="SENDER" length="50" />
+        </property>
+        <property name="receiver" type="java.lang.String">
+            <column name="RECEIVER" length="50" />
+        </property>
+        <property name="receiveTime" type="java.util.Date">
+            <column name="RECEIVE_TIME" length="26" />
+        </property>
+        <property name="delStatus" type="java.lang.String">
+            <column name="DEL_STATUS" length="50" />
+        </property>
+        <property name="readFlag" type="java.lang.String">
+            <column name="READ_FLAG" length="50" />
+        </property>
+
+    </class>
+</hibernate-mapping>

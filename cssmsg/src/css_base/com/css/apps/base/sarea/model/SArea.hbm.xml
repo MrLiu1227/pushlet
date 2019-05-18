@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.css.apps.base.sarea.model.SArea" table="s_area">
+ 
+        <id name="uuid" type="java.lang.String">
+            <column name="uuid" length="64" />
+             <generator class="assigned" />
+        </id>
+        <property name="parentId" type="java.lang.String">
+            <column name="parentId" length="64" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="100" />
+        </property>
+        <property name="orderNum" type="java.lang.Integer">
+            <column name="orderNum" length="10" />
+        </property>
+        <property name="code" type="java.lang.String">
+            <column name="code" length="100" />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="type" length="1" />
+        </property>
+
+    </class>
+</hibernate-mapping>

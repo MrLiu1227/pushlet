@@ -1,0 +1,14 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="slwui.js">
+    <auto value="0" />
+    <sourcefile path="..\plugins\slw\main\slw.js" />
+    <sourcefile path="..\plugins\slw\main\slw.template.js" />
+    <sourcefile path="..\plugins\slw\main\slw.validator.js" />
+    <sourcefile path="..\plugins\slw\dict\slw.dict.js" />
+    <sourcefile path="..\plugins\slw\menu\slw.menu.js" />
+    <sourcefile path="..\plugins\slw\main\slw.file.js" />
+    <sourcefile path="..\plugins\slw\input\slw.input-2.0.js" />
+    <sourcefile path="..\plugins\slw\upload\slw.upload.util.js" />
+    <sourcefile path="..\plugins\slw\upload\slw.upload.ajax.js" />
+</combinefile>
+</jscompress>

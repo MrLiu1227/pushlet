@@ -1,0 +1,273 @@
+body {
+	font: 11px Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+img {
+	border: none;
+}
+
+
+.bottom_box{
+	position: absolute;
+    z-index: -1;
+    bottom: 2px;
+    width: 1150px;
+    height: 60px;
+    border: 1px;
+    opacity:0.7;
+	/*需要计算居中位置*/
+    margin-left: 34%;
+}
+/*lsd*/
+#panelIndexbox{
+	position: absolute;
+	z-index: 1;
+	bottom: 70px;
+	width: 100%;
+	border: 1px;
+	opacity:0.7;
+	margin-left:20px;
+	font-size:0;
+}
+
+.tabLeft{
+	margin-top:20px;
+	width:50px;
+	height:50px;
+	float:left;
+	display: block;
+	background:url(../images/left.png) no-repeat;
+	background-size: cover;
+}
+.tabRight{
+	margin-top:20px;
+	width:52px;
+	height:50px;
+	float:left;
+	display: block;
+	background:url(../images/right.png) no-repeat  -2px 0;
+	background-size: cover;
+}
+
+/*默认应用程序*/
+#default_bottom_app {
+	min-width: 40%;
+	margin:20px 0;
+	height: 50px;
+	float:left;
+	display: block;
+	background:url(../images/TP.png) repeat-x;
+}
+
+#default_bottom_app li {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    margin-top:-20px;
+    float: left;
+    margin-left: 2%;
+    padding-left: 2.5%;
+}
+
+#default_bottom_app li img {
+	width: 48px;
+    height:48px;
+	cursor: pointer;
+}
+#default_bottom_app li:hover {
+	background: none;
+
+}
+#default_bottom_app li:hover img {
+	width: 52px;
+	height:52px;
+	cursor: pointer;
+}
+
+#default_bottom_app .btnOver {
+	background: url(../images/default_appbtn_bg.png) no-repeat center center
+}
+
+
+*{margin:0;padding: 0;}
+ul li{list-style: none; background: none}
+/*.banner_hide{display: none;}*/
+/*body{*/
+/*background-image: url(../images/4.jpg);*/
+/*}*/
+.top{
+	width: 100%;
+	margin: 0 auto 0;
+	text-align: center;
+}
+.top h2{line-height: 60px;font-size: 18px;}
+
+/****************banber start*************/
+.boxB{
+	width:1100px;
+	height:280px;
+	position:relative;
+	display:block;
+	margin:0 auto;
+	z-index: 102;
+}
+.btn_left{
+	width: 70px;height: 115px;
+	position:absolute;
+	top: 95px;
+	left:15px;
+	z-index:50;
+	border-radius:5px;
+}
+.btn_right{
+	width: 70px;
+	height: 115px;
+	position: absolute;
+	top: 95px;
+	right: 15px;
+	z-index: 50;
+	border-radius: 5px;
+}
+.btn_left span,.btn_right span{
+	margin: 16px;
+	display: inline-block;
+	width: 56px;
+	height: 58px;
+	color: white;
+	font-size: 90px;
+	line-height: 70px;
+	cursor: pointer;
+	margin-left: 3px;
+}
+.btn_left:hover,.btn_right:hover{
+	background-color: rgba(18,18,71,.2)
+}
+
+.btn_inBlock span{
+	display: inline-block;
+	width: 80px;height: 90px;
+	background-color: rgba(0,0,0,.0);
+	/*color: #ffffff;*/
+	font-size: 90px;
+	font-family: "ËÎÌå";
+	line-height: 50px;
+	cursor: pointer;
+}
+.btn_inBlock span:hover{
+	/*background-color: rgba(0,0,0,.2)*/
+}
+.banner_block,.banner_hide{
+	background: rgba(0, 0, 60, .5);
+	padding-left: 10px;
+	width: 1100px;
+	height: 220px;
+	overflow: hidden;
+	position: relative;
+	margin:20px auto;
+	padding:0 20px;
+	top: -19px;
+	left: 0;
+	border-radius: 0 0 5px 5px;
+}
+#banner,#hide_block{
+	position: absolute;
+	left: 105px;
+	top: 0;
+	width: 20000px;
+	height: 150px;
+	margin: 10px;
+}
+#banner ul{
+	float: left;
+	width: 300px;
+	overflow:hidden;
+}
+#banner ul li,#banner .hideUl{
+	display: inline-block;
+	margin: 10px 0 10px 50px;
+	width: 245px;
+	height: 140px;
+	vertical-align: top;
+	border-radius:5px
+    background-color: #D7FFF0;
+}
+.bannerIn{
+	position: relative;
+	width: 260px;
+	height: 180px;
+	padding: 20px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 16px;
+	vertical-align: middle;
+	 background-color: #D7FFF0;
+}
+#banner ul li p{
+	color: #696969;
+	font-size: 18px;
+}
+.txt{color: #f40;}
+
+.clearfix:after {
+	clear: both;
+	font-size: 0;
+	height: 0;
+	display: block;
+	visibility: hidden;
+	content: " ";
+	line-height: 0;
+}
+/*更换背景css*/
+.bgTitle{
+	cursor:move;
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 24px;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+	/* color:rgb(18, 18, 71); */
+	color: white;
+}
+.bgTitle-clone{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/images.png) no-repeat -201px -7px;
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	z-index:444;
+	cursor: pointer;
+}
+.deskApp{
+	opacity:1
+}
+.deskAppOn{
+	opacity:0.7;
+	background: none;
+}
+.deskApp.hover{background: none;}
+
+.left{
+	width:70px; height: 70px; display: block;
+	background:url(../images/appImages/left.png) no-repeat 5px center;
+	opacity:0.1;
+}
+.leftOn{
+	width:70px; height: 70px; display: block;
+	background:url(../images/appImages/left_hover.png) no-repeat 5px center;
+	opacity:0.3;
+}
+.right{
+	width:70px; height: 70px; display: block;
+	background:url(../images/appImages/right.png) no-repeat -10px center;
+	opacity:0.1;
+}
+.rightOn{
+	width:70px; height: 70px; display: block;
+	background:url(../images/appImages/right_hover.png) no-repeat -10px center;
+	opacity:0.3;
+}

@@ -1,0 +1,19 @@
+@IMPORT url("../../../../dform/css/bootstrap/css/bootstrap.css?821");
+@IMPORT url("../../../../cssui/layout/default.css");
+@IMPORT url("../../../../cssui/layout/document.css");
+@IMPORT url("../../../../cssui/themes/metro/style.css");
+
+
+/*=======================ÐÞÕý=======================*/
+.docbtnFix{
+    margin-top: 10px !important;
+    padding-left: 15px !important;
+    max-height: 500px !important;
+	overflow: auto !important;
+}
+.tablesld span {
+	margin-left: 0px !important;
+}
+input[type="button"]{
+	border: 2px outset buttonface !important;
+}

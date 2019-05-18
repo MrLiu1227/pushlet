@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.css.app.base.attachment.model.Attachment" table="attachment">
+ 
+		<id name="uuid" type="java.lang.String">
+			<column name="uuid" length="50" />
+			<generator class="assigned" />
+		</id>
+		<property name="md5Uuid" type="java.lang.String">
+			<column name="md5_uuid" length="50" />
+		</property>
+		<property name="tableName" type="java.lang.String">
+			<column name="table_name" length="50" />
+		</property>
+		<property name="tableKey" type="java.lang.String">
+			<column name="table_key" length="50" />
+		</property>
+		<property name="tableUuid" type="java.lang.String">
+			<column name="table_uuid" length="50" />
+		</property>
+		<property name="serverId" type="java.lang.String">
+			<column name="serverId" length="10" />
+		</property>
+		<property name="fileUrl" type="java.lang.String">
+			<column name="fileUrl" length="255" />
+		</property>
+		<property name="fileName" type="java.lang.String">
+			<column name="fileName" length="255" />
+		</property>
+		<property name="fileType" type="java.lang.String">
+			<column name="fileType" length="255" />
+		</property>
+		<property name="fileExt" type="java.lang.String">
+			<column name="fileExt" length="50" />
+		</property>
+		<property name="fileSize" type="java.lang.Long">
+			<column name="fileSize" length="10" />
+		</property>
+		<property name="userId" type="java.lang.String">
+			<column name="userId" length="32" />
+		</property>
+		<property name="uploadTime" type="java.util.Date">
+			<column name="uploadTime" length="19" />
+		</property>
+		<property name="orderNum" type="java.lang.Integer">
+			<column name="orderNum" length="10" />
+		</property>
+		<property name="category" type="java.lang.String">
+			<column name="category" length="20" />
+		</property>
+		<property name="extraData" type="java.lang.String">
+			<column name="extraData" length="500" />
+		</property>
+
+	</class>
+</hibernate-mapping>

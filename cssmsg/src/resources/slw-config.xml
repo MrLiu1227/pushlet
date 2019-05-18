@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slw-config>
+	<interceptors>
+		<interceptor name="params" class="org.slw.mvc.interceptor.ParameterInterceptor" />
+		<interceptor name="cssDB" class="com.css.core.interceptor.CssDBInterceptor" />
+		<interceptor name="cssSSO" class="com.css.core.interceptor.CssSSOInterceptor" />
+		<interceptor name="cssToken" class="com.css.core.interceptor.CssTokenInterceptor" />
+		
+		<!-- 默认对提交参数中的html特殊符号进行处理，配置表中的标签不拦截 -->
+		<interceptor name="htmlInterceptor" class="org.slw.framework.interceptor.HtmlInterceptor">
+			<tag name="content" />
+			<tag name="message" />
+			<tag name="remark" />
+			<tag name="item.content" />
+			<tag name="slw.Rest.Arg0" />
+		</interceptor>
+
+		<!-- IP白名单，支持 192.168.1.1, 192.168.1.*, 192.168.1.1-255, *等  -->
+		<interceptor name="ipWhiteList" class="org.slw.framework.interceptor.IpWhiteListInterceptor">
+			<tag value="10.13.1.80-95" />
+			<tag value="192.168.*" />
+			 <tag value="*" /> 
+		</interceptor>
+		
+		<!-- IP黑名单 -->
+		<interceptor name="ipBlackList" class="org.slw.framework.interceptor.IpBlackListInterceptor">
+		</interceptor>
+
+		<interceptor name="restIpInterceptor" class="org.slw.framework.interceptor.IpWhiteListInterceptor" >
+			<tag value="*" />
+		</interceptor>
+
+		<!-- actionStack -->
+		<interceptor-stack name="actionStack">
+			<interceptor-ref name="params" />
+		</interceptor-stack>
+
+		<!-- requestStack -->
+		<interceptor-stack name="requestStack">
+			<interceptor-ref name="ipWhiteList" />
+			<interceptor-ref name="ipBlackList" />
+			<interceptor-ref name="cssSSO" />
+			<interceptor-ref name="htmlInterceptor" />
+		</interceptor-stack>
+
+		<interceptor-stack name="nonLogonStack">
+			<interceptor-ref name="ipWhiteList" />
+			<interceptor-ref name="ipBlackList" />
+			<interceptor-ref name="htmlInterceptor" />
+		</interceptor-stack>
+
+		<!-- restStack -->
+		<interceptor-stack name="restStack">
+			<interceptor-ref name="restIpInterceptor" />
+			<interceptor-ref name="htmlInterceptor" />
+		</interceptor-stack>
+
+		<!-- finallyStack -->
+		<interceptor-stack name="finallyStack">
+			<interceptor-ref name="cssDB" />
+		</interceptor-stack>
+
+	</interceptors>
+
+</slw-config>

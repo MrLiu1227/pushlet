@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.css.desktop.message.model.MessagecenterAdvices" table="messagecenter_advices">
+ 
+        <id name="uuid" type="java.lang.String">
+            <column name="UUID" length="32" />
+             <generator class="assigned" />
+        </id>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" length="100" />
+        </property>
+        <property name="content" type="java.lang.String">
+            <column name="CONTENT" length="500" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="CREATE_TIME" length="19" />
+        </property>
+        <property name="validUntil" type="java.util.Date">
+            <column name="VALID_UNTIL" length="19" />
+        </property>
+        <property name="publisherId" type="java.lang.String">
+            <column name="PUBLISHER_ID" length="32" />
+        </property>
+        <property name="publisherName" type="java.lang.String">
+            <column name="PUBLISHER_NAME" length="50" />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="TYPE" length="10" />
+        </property>
+        <property name="receiverId" type="java.lang.String">
+            <column name="RECEIVER_ID" length="32" />
+        </property>
+        <property name="linkUrl" type="java.lang.String">
+            <column name="LINK_URL" length="500" />
+        </property>
+        <property name="appId" type="java.lang.String">
+            <column name="APP_ID" length="32" />
+        </property>
+
+    </class>
+</hibernate-mapping>

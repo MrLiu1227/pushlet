@@ -1,0 +1,415 @@
+.jqUploadTemplate .btnSort {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.jqUploadTemplate .jqupload-container {
+	padding: 10px 0 10px 0;
+}
+
+.jqUploadTemplate .jqupload-container table {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.jqUploadTemplate img {
+	width: 32px;
+	height: 30px;
+}
+
+.jqUploadTemplate .uploadInfo {
+	width: 100%;
+	display: block;
+}
+
+.jqUploadTemplate .totalStatus {
+	padding-top: 8px;
+	padding-left: 10px;
+}
+
+.jqUploadTemplate .tipsCell {
+	font-size: 12px;
+	margin: 3px;
+}
+
+.jqUploadTemplate .default-file-name {
+	color: #333;
+	font-family: georgia, "Microsoft YaHei", serif, times new roman;
+}
+
+.jqUploadTemplate .default-file-size {
+	font-style: italic;
+	color: gray;
+	font-size: 90%;
+	font-family: georgia, "Microsoft YaHei", serif, times new roman;
+}
+
+.jqUploadTemplate span.statusCell .progress {
+	position: relative;
+	display: inline-block;
+	width: 55px;
+	height: 17px;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	top: 4px;
+	border-radius: 3px;
+}
+
+.jqUploadTemplate span.statusCell .progress .progress-bar {
+	line-height: 17px;
+}
+
+.jqUploadTemplate .toolsCell .tools .fa {
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.jqUploadTemplate .toolsCell .tools .fa:last-of-type {
+	margin-right: 0px;
+}
+
+/* tableTemplate */
+.jqUploadTemplate td {
+	background: #ffffff;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.jqUploadTemplate td.messageCell {
+	text-align: left;
+	vertical-align: middle;
+}
+
+/* tableMethod2专有  */
+.tableTemplate2 td .statusCell {
+	margin-left: 8px;
+}
+
+/* liTemplate */
+.jqUploadTemplate ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: auto;
+}
+
+.jqUploadTemplate ul li {
+	display: block;
+	_display: inline-block;
+	*display: inline-block;
+	border-radius: 3px;
+	padding: 5px;
+	background: #ffffff;
+	margin-bottom: 3px;
+	border: 1px solid #e8e8e8;
+	border-left: 2px solid #e8e8e8;
+	color: #333;
+	line-height: 32px;
+}
+
+.jqUploadTemplate ul li:last-of-type {
+	margin-bottom: 0px;
+}
+
+.jqUploadTemplate ul li .messageCell {
+	margin-left: 5px;
+}
+
+.jqUploadTemplate ul li .numCell {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+}
+
+.jqUploadTemplate ul li .toolsCell {
+	float: right;
+	color: #dd4b39;
+	_margin-top: -23px;
+	*margin-top: -23px;
+}
+
+}
+.jqUploadTemplate ul li .tools {
+	/* float: right; */
+	color: #dd4b39;
+}
+
+.liTemplate.mouseMove ul li .tools {
+	display: none;
+	_display: block;
+}
+
+.liTemplate.mouseMove ul li:hover .tools {
+	display: inline-block;
+}
+
+/* picMethod */
+.picTemplate .jqupload-container {
+	padding: 2px 0 2px 0;
+}
+
+.picTemplate .jqupload-container ul {
+	dispaly: block;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+	list-style: none;
+	border: none;
+	overflow: auto;
+}
+
+.picTemplate .jqupload-container ul li {
+	float: left;
+	list-style: none;
+	background: #ffffff;
+	padding: 0px;
+	border: none;
+}
+
+.picTemplate .imgPreview {
+	font-size: 14px;
+	-webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16);
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16);
+}
+
+.picTemplate .imgPreview {
+	position: relative;
+	display: inline-block;
+	margin: 8px;
+	vertical-align: top;
+	border: 1px solid #acacac;
+	padding: 6px 6px 6px 6px;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.picTemplate .center-block {
+	display: table;
+	_display: block;
+	*display: block;
+	margin: 0 auto;
+}
+
+/* 三个关键样式 ：js中动态设置图片高、宽度 */
+.picTemplate .details {
+	position: relative;
+	background: #ebebeb;
+	padding: 5px;
+	margin-bottom: 22px;
+	width: 140px;
+	height: 180px;
+}
+
+.picTemplate img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.picTemplate .statusCell {
+	position: absolute;
+	top: 180px;
+	left: 0px;
+	right: 0px;
+	height: 6px;
+	background: #d7d7d7;
+	display: none;
+}
+
+.picTemplate .messageCell, .picTemplate .default-file-name {
+	display: none;
+}
+
+.picTemplate .default-file-size {
+	position: absolute;
+	bottom: -28px;
+	left: 3px;
+	height: 28px;
+	line-height: 28px;
+}
+
+.picTemplate .toolsCell {
+	display: none;
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+	height: 20px;
+	line-height: 20px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	padding: 0px 4px 0px 4px;
+}
+
+.picTemplate ul li:hover .toolsCell {
+	display: inline-block;
+}
+
+.picTemplate .successMark, .picTemplate .dangerMark {
+	display: none;
+	position: absolute;
+	text-align: center;
+	font-size: 25px;
+	padding-top: 3px;
+	width: 40px;
+	height: 40px;
+	right: -10px;
+	top: -10px;
+	background-color: #ffffff;
+	border: 1px solid #efefef;
+	border-radius: 25px;
+	filter: alpha(opacity = 80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+
+.picTemplate .successMark {
+	color: #00a65a;
+}
+
+.picTemplate .dangerMark {
+	color: #ff0000;
+}
+
+.picTemplate .btnUpload.pull-left {
+	margin-left: 8px;
+}
+
+.picTemplate .jqupload-container {
+	margin: 0;
+}
+
+/* simpleLiMethod */
+.simpleLiMethod .jqupload-container {
+	padding: 0;
+}
+
+.simpleLiMethod  ul li {
+	margin: 0px;
+	padding: 0px;
+	background: none;
+	border: none;
+	color: #333;
+}
+
+.simpleLiMethod .uploadInfo {
+	width: auto;
+	float: left;
+}
+
+.simpleLiMethod .totalStatus {
+	display: none;
+}
+
+.simpleLiMethod .statusCell {
+	display: '';
+}
+
+.simpleLiMethod .statusCell .label-success {
+	display: none;
+}
+
+.simpleLiMethod .toolsCell {
+	display: block;
+}
+
+.simpleLiMethod .toolsCell  .fa-edit {
+	display: none;
+}
+
+/* sortable */
+.jqUploadTemplate .sortable {
+	margin: auto;
+	padding: 0;
+	width: 100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.jqUploadTemplate .sortable-placeholder {
+	background: none;
+	border: 1px dashed #CCC;
+}
+
+.jqUploadTemplate.picTemplate ul li.sortable-placeholder {
+	background: none;
+	border: 1px dashed #CCC;
+}
+/* simplePicMethod */
+.simplePicMethod .jqupload-container {
+	padding: 0;
+}
+
+.simplePicMethod  ul li {
+	margin: 0px;
+	padding: 0px;
+	background: none;
+	border: none;
+	color: #333;
+}
+
+.simplePicMethod .uploadInfo {
+	width: auto;
+}
+
+.simplePicMethod .totalStatus {
+	display: none;
+}
+
+.simplePicMethod .statusCell {
+	display: '';
+}
+
+.simplePicMethod .statusCell .label-success {
+	display: none;
+}
+
+.simplePicMethod ul li .toolsCell {
+	float: none;
+	display: block;
+}
+
+.simplePicMethod ul li .toolsCell .tools {
+	*padding-top: 15px;
+	_padding-top: 5px;
+}
+
+.simplePicMethod .toolsCell .fa-edit {
+	display: none;
+}
+
+.simplePicMethod .btn-user-logo i, .simplePicMethod .btn-man-logo i, .simplePicMethod .btn-woman-logo i {
+	display: none;
+}
+
+.simplePicMethod .btn-user-logo {
+	background: #fff url(userlogo.png) no-repeat;
+	background-size: cover;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='cssui/plugins/jqupload/userlogo.png', sizingMethod='scale');
+}
+
+.simplePicMethod .btn-man-logo {
+	background: #fff url(man.png) no-repeat;
+	background-size: cover;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='cssui/plugins/jqupload/man.png', sizingMethod='scale');
+}
+
+.simplePicMethod .btn-woman-logo {
+ 	background: #fff url(woman.png) no-repeat;
+	background-size: cover; 
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='cssui/plugins/jqupload/woman.png', sizingMethod='scale');
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <servlet>
+    <servlet-name>SlwFramework</servlet-name>
+    <servlet-class>org.slw.mvc.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SlwFramework</servlet-name>
+    <url-pattern>*.action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SlwRESTful</servlet-name>
+    <servlet-class>org.slw.rest.servlet.RestfulServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SlwRESTful</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+  <error-page>
+    <error-code>560</error-code>
+    <location>/error.jsp</location>
+  </error-page>
+  <jsp-config>
+    <taglib>
+      <taglib-uri>webwork</taglib-uri>
+      <taglib-location>/WEB-INF/slwtag.tld</taglib-location>
+    </taglib>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <el-ignored>true</el-ignored>
+    </jsp-property-group>
+  </jsp-config>
+
+  <!-- pushlet servlet -->
+  <servlet>
+    <servlet-name>pushlet</servlet-name>
+    <servlet-class>nl.justobjects.pushlet.servlet.Pushlet</servlet-class>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>pushlet</servlet-name>
+    <url-pattern>/pushlet.srv</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>myPushlet</servlet-name>
+    <servlet-class>com.css.app.personalmsg.server.TestServlet</servlet-class>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myPushlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+  <!-- pushlet servlet -->
+
+  <listener>
+    <listener-class>com.css.msgcenter.mq.service.MsgQmListener</listener-class>
+  </listener>
+</web-app>

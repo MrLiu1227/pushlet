@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>slwSlider</title>
+<script type="text/javascript" src="jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../../main/slw.js"></script>
+<script type="text/javascript" src="../slw.slider.js"></script>
+<link href="../style/slider.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<h1>SlwSlider Demo</h1>
+	<div class="slider-wrapper theme-dark">
+		<div id="slider_demo" class="cssSlider">
+			<img title="这是图片1" rel="http://www.baidu.com" src="1.jpg" /> <img title="这是图片2" src="2.jpg" /> <img title="这是图片3" src="3.jpg" /> <img title="这是图片4" src="4.jpg" />
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			$('#slider_demo').slwSlider();
+		});
+	</script>
+</body>
+</html>

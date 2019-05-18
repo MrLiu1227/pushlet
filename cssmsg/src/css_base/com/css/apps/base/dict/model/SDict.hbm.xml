@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+    <class name="com.css.apps.base.dict.model.SDict" table="S_DICT">
+        <id name="uuid" column="uuid" type="java.lang.String">
+            <generator class="assigned" />
+        </id>
+        <property
+            name="code"
+            column="code"
+            length="10"
+            type="java.lang.String" />
+        <property
+            name="parentId"
+            column="parentId"
+            length="10"
+            type="java.lang.String" />
+        <property
+            name="name"
+            column="name"
+            length="50"
+            type="java.lang.String" />
+        <property
+            name="tableName"
+            column="tableName"
+            length="50"
+            type="java.lang.String" />
+       <property
+            name="tableType"
+            column="TABLE_TYPE"
+            length="10"
+            type="java.lang.String" />
+
+        <property
+            name="remark"
+            column="remark"
+            length="50"
+            type="java.lang.String" />
+        <property
+            name="orderNum"
+            column="orderNum"
+            type="java.lang.Integer" />
+    </class>
+</hibernate-mapping>

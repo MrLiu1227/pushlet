@@ -1,0 +1,12 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="cssui.js">
+    <auto value="0" />
+    <sourcefile path=".\common.js" />
+    <sourcefile path=".\css.core.js" />
+    <sourcefile path=".\contextmenu.js" />
+    <sourcefile path=".\table.js" />
+    <sourcefile path=".\navtab.js" />
+    <sourcefile path=".\action.js" />
+    <sourcefile path=".\myapp.js" />
+</combinefile>
+</jscompress>

@@ -1,0 +1,277 @@
+.cropper-container {
+	position: relative;
+	overflow: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none
+}
+
+.cropper-container img {
+	width: 100%;
+	height: 100%;
+	min-width: 0 !important;
+	min-height: 0 !important;
+	max-width: none !important;
+	max-height: none !important
+}
+
+.cropper-modal, .cropper-canvas {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0
+}
+
+.cropper-canvas {
+	background-color: #fff;
+	opacity: 0;
+	filter: alpha(opacity = 0)
+}
+
+.cropper-modal {
+	background-color: #000;
+	opacity: .5;
+	filter: alpha(opacity = 50)
+}
+
+.cropper-dragger {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%
+}
+
+.cropper-viewer {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	outline-width: 1px;
+	outline-style: solid;
+	outline-color: #69f;
+	outline-color: rgba(51, 102, 255, .75)
+}
+
+.cropper-dashed {
+	position: absolute;
+	display: block;
+	border: 0 dashed #fff;
+	opacity: .5;
+	filter: alpha(opacity = 50)
+}
+
+.cropper-dashed.dashed-h {
+	top: 33.3%;
+	left: 0;
+	width: 100%;
+	height: 33.3%;
+	border-top-width: 1px;
+	border-bottom-width: 1px
+}
+
+.cropper-dashed.dashed-v {
+	top: 0;
+	left: 33.3%;
+	width: 33.3%;
+	height: 100%;
+	border-right-width: 1px;
+	border-left-width: 1px
+}
+
+.cropper-face, .cropper-line, .cropper-point {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: .1;
+	filter: alpha(opacity = 10)
+}
+
+.cropper-face {
+	top: 0;
+	left: 0;
+	cursor: move;
+	background-color: #fff
+}
+
+.cropper-line {
+	background-color: #69f
+}
+
+.cropper-line.line-e {
+	top: 0;
+	right: -3px;
+	width: 5px;
+	cursor: e-resize
+}
+
+.cropper-line.line-n {
+	top: -3px;
+	left: 0;
+	height: 5px;
+	cursor: n-resize
+}
+
+.cropper-line.line-w {
+	top: 0;
+	left: -3px;
+	width: 5px;
+	cursor: w-resize
+}
+
+.cropper-line.line-s {
+	bottom: -3px;
+	left: 0;
+	height: 5px;
+	cursor: s-resize
+}
+
+.cropper-point {
+	width: 5px;
+	height: 5px;
+	overflow: hidden;
+	background-color: #69f;
+	opacity: .75;
+	filter: alpha(opacity = 75);
+	background-color: #69f;
+}
+
+.cropper-point.point-e {
+	top: 50%;
+	right: -3px;
+	margin-top: -3px;
+	cursor: e-resize
+}
+
+.cropper-point.point-n {
+	top: -3px;
+	left: 50%;
+	margin-left: -3px;
+	cursor: n-resize
+}
+
+.cropper-point.point-w {
+	top: 50%;
+	left: -3px;
+	margin-top: -3px;
+	cursor: w-resize
+}
+
+.cropper-point.point-s {
+	bottom: -3px;
+	left: 50%;
+	margin-left: -3px;
+	cursor: s-resize
+}
+
+.cropper-point.point-ne {
+	top: -3px;
+	right: -3px;
+	cursor: ne-resize
+}
+
+.cropper-point.point-nw {
+	top: -3px;
+	left: -3px;
+	cursor: nw-resize
+}
+
+.cropper-point.point-sw {
+	bottom: -3px;
+	left: -3px;
+	cursor: sw-resize
+}
+
+.cropper-point.point-se {
+	right: -3px;
+	bottom: -3px;
+	cursor: se-resize;
+}
+
+.cropper-hidden {
+	display: none !important
+}
+
+.cropper-invisible {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: auto !important;
+	max-width: none !important;
+	height: auto !important;
+	max-height: none !important;
+	opacity: 0;
+	filter: alpha(opacity = 0)
+}
+
+.cropper-move {
+	cursor: move
+}
+
+.cropper-crop {
+	cursor: crosshair
+}
+
+.cropper-disabled .cropper-canvas, .cropper-disabled .cropper-face,
+	.cropper-disabled .cropper-line, .cropper-disabled .cropper-point {
+	cursor: not-allowed
+}
+
+/* crop */
+.crop-wrapper {
+	height: 450px;
+	width: 600px;
+	width: 100%;
+	margin-top: 15px;
+	background-color: #ffffff;
+	overflow: hidden;
+	border: 1px solid #eee;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, .15);
+}
+
+.crop-wrapper img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.crop-preview {
+	float: left;
+	margin-top: 15px;
+	margin-right: 15px;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.crop-preview:hover {
+	border-color: #ccf;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+}
+
+.preview0 {
+	height: 184px;
+	width: 184px;
+	margin-top: 15px;
+}
+
+.preview1 {
+	height: 100px;
+	width: 100px;
+}
+
+.preview2 {
+	height: 50px;
+	width: 50px;
+}
+
+.crop-preview img {
+	width: 100%;
+}

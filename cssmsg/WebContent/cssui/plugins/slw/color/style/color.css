@@ -1,0 +1,169 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.slw-color {
+	display: none;
+	position: absolute;
+	z-index: 1060;
+	background: #fff;
+	width: 202px;
+	padding: 4px;
+	font-size: 13px;
+	line-height: 2em;
+	border: 1px solid #d2d6de;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175)
+}
+
+.slw-color div {
+	font-size: 13px;
+}
+
+.slw-color .theme {
+	float: left;
+}
+
+.slw-color a {
+	color: #000;
+	text-decoration: none;
+	float: right;
+}
+
+.slw-color a:hover {
+	color: #337ab7;
+	text-decoration: underline;
+}
+
+.slw-color ul {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+.slw-color ul li, .slw-color .c2 li {
+	float: left;
+	width: 15px;
+	height: 16px;
+	*width: 14px;
+	*height: 15px;
+	list-style: none;
+	line-height: 1.8em;
+	cursor: pointer;
+	border: 1px solid #C0C0C0;
+	margin: 2px;
+}
+
+.slw-color .c2 li {
+	border-width: 0 1px 0 1px;
+	margin: 0px 2px 0px 2px;
+}
+
+.slw-color .c2 li.topLi {
+	border-top: 1px solid #C0C0C0;
+}
+
+.slw-color .c2 li.bottomLi {
+	border-bottom: 1px solid #C0C0C0;
+}
+
+.slw-color-btn {
+	height: 22px;
+	line-height: 20px;
+	padding: 0 40px 0 2px;
+	cursor: pointer;
+	background: url(color.png) #fff right center no-repeat;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+}
+
+.slw-color .spacebar {
+	clear: both;
+	line-height: 7px;
+	height: 7px;
+}
+
+.slw-color .lessDiv, .slw-color .moreDiv {
+	height: 162px;
+}
+
+.slw-color .moreDiv {
+	display: none;
+}
+
+.slw-color .moreUl, .slw-color .moreUl ul {
+	margin: 0px;
+	overflow: hidden;
+	line-height: 0px;
+	font-size: 0px;
+}
+
+.slw-color .moreUl ul li {
+	width: 14px;
+	height: 12px;
+	margin: 0px;
+	border: none;
+	overflow: hidden;
+	line-height: 0px;
+	font-size: 0px;
+}
+
+.slw-color .moreUl .mul0, .slw-color .moreUl .mul12 {
+	margin-left: 52px;
+	_margin-left: 26px;
+}
+
+.slw-color .moreUl .mul1, .slw-color .moreUl .mul11 {
+	margin-left: 45px;
+	_margin-left: 22px;
+}
+
+.slw-color .moreUl .mul2, .slw-color .moreUl .mul10 {
+	margin-left: 38px;
+	_margin-left: 19px;
+}
+
+.slw-color .moreUl .mul3, .slw-color .moreUl .mul9 {
+	margin-left: 31px;
+	_margin-left: 15px;
+}
+
+.slw-color .moreUl .mul4, .slw-color .moreUl .mul8 {
+	margin-left: 24px;
+	_margin-left: 12px;
+}
+
+.slw-color .moreUl .mul5, .slw-color .moreUl .mul7 {
+	margin-left: 17px;
+	_margin-left: 9px;
+}
+
+.slw-color .moreUl .mul6 {
+	margin-left: 10px;
+	_margin-left: 5px;
+}
+
+.slw-color .pre, .slw-color .cur {
+	float: left;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	border: 1px solid #C0C0C0;
+	margin: 0px 2px 0px 2px;
+}
+
+.slw-color .preText, .slw-color .curText {
+	float: left;
+	width: 70px;
+	margin: -5px 0px 0px 0px;
+}
+
+.clear {
+	clear: both;
+	overflow: hidden;
+	line-height: 0px;
+	font-size: 0px;
+	height: 0px;
+}

@@ -1,0 +1,333 @@
+/*!
+ * Viewer v0.5.1
+ * https://github.com/fengyuanchen/viewer
+ *
+ * Copyright (c) 2015-2016 Fengyuan Chen
+ * Released under the MIT license
+ *
+ * Date: 2016-03-11T07:57:59.486Z
+ */
+.viewer-zoom-in,
+.viewer-zoom-out,
+.viewer-one-to-one,
+.viewer-reset,
+.viewer-prev,
+.viewer-play,
+.viewer-next,
+.viewer-rotate-left,
+.viewer-rotate-right,
+.viewer-flip-horizontal,
+.viewer-flip-vertical,
+.viewer-fullscreen,
+.viewer-fullscreen-exit,
+.viewer-close {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: transparent; 
+  background-image: url('toolbar.png');
+  *background-image: url('toolbar.gif');
+  background-repeat: no-repeat;
+}
+.viewer-zoom-in {
+  content: 'Zoom In';
+  background-position: 0 0;
+}
+.viewer-zoom-out {
+  content: 'Zoom Out';
+  background-position: -20px 0;
+}
+.viewer-one-to-one {
+  content: 'One to One';
+  background-position: -40px 0;
+}
+.viewer-reset {
+  content: 'Reset';
+  background-position: -60px 0;
+}
+.viewer-prev {
+  content: 'Previous';
+  background-position: -80px 0;
+}
+.viewer-play {
+  content: 'Play';
+  background-position: -100px 0;
+}
+.viewer-next {
+  content: 'Next';
+  background-position: -120px 0;
+}
+.viewer-rotate-left {
+  content: 'Rotate Left';
+  background-position: -140px 0;
+}
+.viewer-rotate-right {
+  content: 'Rotate Right';
+  background-position: -160px 0;
+}
+.viewer-flip-horizontal {
+  content: 'Flip Horizontal';
+  background-position: -180px 0;
+}
+.viewer-flip-vertical {
+  content: 'Flip Vertical';
+  background-position: -200px 0;
+}
+.viewer-fullscreen {
+  content: 'Enter Full Screen';
+  background-position: -220px 0;
+}
+.viewer-fullscreen-exit {
+  content: 'Exit Full Screen';
+  background-position: -240px 0;
+}
+.viewer-close {
+  content: 'Close';
+  background-position: -260px 0;
+}
+.viewer-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer; 
+  border-radius: 50%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .5);
+}
+.viewer-player {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  cursor: none; 
+  background-color: #000;
+}
+.viewer-player > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.viewer-toolbar {
+  overflow: hidden;
+  width: 240px;
+  margin: 0 auto 3px;
+  padding: 3px 0;
+}
+.viewer-toolbar li {
+  float: left;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  cursor: pointer; 
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 50%;
+}
+.viewer-toolbar  li:hover {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .8);
+}
+.viewer-toolbar  li {
+  margin: 2px;
+  margin-left: 1px;
+}
+.viewer-toolbar .viewer-play {
+  width: 30px;
+  height: 30px;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+.viewer-toolbar .viewer-play {
+  margin: 5px;
+}
+.viewer-layer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #888;
+	z-index: 2016;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .7);
+  direction: ltr !important;
+  -ms-touch-action: none;
+      touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+.viewer-layer::-moz-selection,
+.viewer-layer *::-moz-selection {
+  background-color: transparent;
+}
+.viewer-layer::selection,
+.viewer-layer *::selection {
+  background-color: transparent;
+}
+.viewer-container {
+  position: absolute;
+	z-index:2017;
+  font-size: 0;
+  line-height: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.viewer-container img {
+  display: block;
+  width: 100%;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: auto;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+.viewer-canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.viewer-canvas > img {
+  width: auto;
+  max-width: none !important;
+  height: auto;
+  margin: 15px auto;
+}
+.viewer-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.viewer-navbar {
+  overflow: hidden;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .9);
+}
+.viewer-list {
+  margin: 0;
+  padding: 1px 0;
+  overflow: hidden;
+}
+.viewer-list li {
+  float: left;
+  list-style-type:none;
+  
+	border:1px solid #fff;
+  font-size: 0;
+  line-height: 0;
+  
+  overflow: hidden;
+  cursor: pointer; 
+  opacity: .5;
+  color: transparent;
+  filter: alpha(opacity=50); 
+  background-color: #fff; 
+	
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size:cover;
+}
+.viewer-list li {
+ 	margin-left: 2px;
+}
+.viewer-list .viewer-active {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.viewer-list li: hover {
+	opacity: 1;
+  filter: alpha(opacity=100);
+}
+.viewer-tooltip {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 50px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -25px;
+  border-radius: 10px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .8);
+}
+.viewer-title {
+	width: 100%;
+	text-align:center;
+  font-size: 12px;
+  line-height: 1;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  color: #fff;
+}
+.viewer-fixed {
+  position: fixed;
+}
+.viewer-open {
+  overflow: hidden;
+}
+.viewer-show {
+  display: block;
+}
+.viewer-hide {
+  display: none;
+}
+.viewer-invisible {
+  visibility: hidden;
+}
+.viewer-move {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor:    -moz-grab;
+  cursor:         grab;
+}
+.viewer-fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.viewer-in {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.viewer-transition {
+  -webkit-transition: all .3s ease-out;
+       -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+}
+@media (max-width: 767px) {
+  .viewer-hide-xs-down {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .viewer-hide-sm-down {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .viewer-hide-md-down {
+    display: none;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+
+<link rel="stylesheet" href="login/css/style.css">
+
+</head>
+<body>
+
+</body>
+</html>
+<script src="js/jquery.js"></script>
+</body>
+<script>
+(function(win){
+  //window写方法
+  win.xx = function(uid){
+    var setting = {
+      url:serverUrl+"deskcalogin.action", 
+      dataType: 'json',
+      type:"POST",
+      data:{
+        "uuid":uid
+      },
+      success:function(msg){
+        if(msg.result=='0'){
+          //jid给QT
+          window.location="main.html";
+        }else if(msg.result=='1'){
+          
+        }
+      },
+      error: function(){  
+        
+      }
+    } 
+    $.ajax(setting);
+  }
+  //window
+})(window);
+</script>
+

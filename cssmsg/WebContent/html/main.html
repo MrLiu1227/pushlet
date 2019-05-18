@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>登录</title>
+    <script type="text/javascript" src="js/qwebchannel.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/globle_env.js"></script>
+    <script src="js/Sortable.js"></script>
+    <!--<script src="js/dialogue_drag.js"></script>-->
+    <!--lsd-->
+    
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/panelmanager.js"></script>
+
+    <script src="login/js/cssui.min.js"></script>
+    <script src="login/js/desklogin.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/panel.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/menu.css"/>
+    <link rel="stylesheet" type="text/css" href="css/appStore.css"/>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.2.js"></script>
+    <script type="text/javascript" src="js/getPanelContent.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bg.css"/>
+    <script type="text/javascript" src="js/jquery.sortable.js?id=15"></script>
+    <link rel="stylesheet" href="login/css/style.css">
+    <link rel="stylesheet" href="login/css/showdiv.css">
+    <link rel="stylesheet" type="text/css" href="css/desktop.css"/>
+    <link rel="stylesheet" type="text/css" href="css/right.css"/>
+    <link rel="stylesheet" type="text/css" href="icon/iconbtn/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="icon/loginIcon/iconfont.css"/>
+ 	<link rel="stylesheet" type="text/css" href="icon/font-DB/iconfont.css">
+
+    <!--lsd-start-->
+    <script src="js/NewmessageCenter.js"></script>
+  
+    <script type="text/javascript" src="js/boot.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/messageCenter.css"/>
+    
+
+    <!--lsd-end-->
+    <!--面板索引样式-->
+    <style type="text/css">
+    .maskingOut{
+     width:100%;
+     height:100%;
+     position:absolute;
+     top:0;
+     left:0;
+     z-index:99;
+    }
+        .img-index{
+            position: absolute;
+            width: 95%;
+            bottom: 80px;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+        .img-index li{
+            float: left;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgba(0,6,100,0.4);
+            font-size: 12px;
+            cursor: pointer;
+            margin: 0 3px;
+            color: #fff;
+        }
+        .img-index li.index{
+            background-color: rgba(0,0,0,0.8);
+        }
+        .img-index li:hover{
+            background-color: rgba(0,0,0,0.8);
+        }
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            /* width:2000px; */
+        }
+        .coverLi {
+            overflow: visible;
+            width: auto;
+            height: auto;
+            float: none;
+            margin-left: 0;
+            position: static;
+            list-style: none !important;
+             background-color: #D7FFF0;
+             cursor: move;
+        }
+
+        ul li.bgclocrc {
+            /*lsd*/
+            background: #D7FFF0;
+            /*border: 1px solid #a7aae3;*/
+        }
+
+        ul li:hover {
+            /*lsd*/
+           /*  background: hsla(0, 0%, 100%, 0); */
+            /*border: 1px solid #a7aae3;*/
+        }
+        .banner_hidden{
+            width: 905px;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			left: 80px;
+        }
+        .banner_title{
+	      width: 1100px;
+			height: 45px;
+			position: relative;
+			top: 1px;
+			left: 0;
+			border-radius: 5px 5px 0 0;
+			background: rgba(0, 0, 60, .5);
+			z-index: 102;
+			cursor:move;
+        } 
+        .banner_title>.banner_titleText{
+			width: 905px;
+			height: 60px;
+			line-height: 60px;
+			font-size: 24px;
+			margin: 0 auto;
+			text-align: center;
+			font-weight: bold;
+			color: white;
+         }
+        .banner_title>.banner_titleText>span{
+		    display: inline-block;
+		    width: 20px;
+		    height: 20px;
+		    background: url(images/images.png) no-repeat -201px -7px;
+		    position: absolute;
+		    right: 30px;
+		    top: 20px;
+		    cursor: pointer;
+        }
+        #deskBackGround{
+            background:#64BFD1;
+        }
+        .deleteImg>img,#clickImg>img{
+          cursor:pointer;
+        }
+        #right{
+            display: inline-block;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 138px;
+			right: 33px;
+			font-size: 30px;
+			color: #02A275;
+			cursor:pointer;
+        }
+        #left{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 138px;
+			left: 23px;
+			font-size: 30px;
+			color: #02A275;
+			cursor:pointer;
+        }
+        .BtnOk{
+          width: 50px;
+			height: 30px;
+			line-height: 30px;
+			display: block;
+			position: absolute;
+			bottom: 20px;
+			left: 583px;
+        }
+        .login{
+			width: 25.5%;
+			height: 44.9%;
+			background-color:rgba(204,204,204,.6);
+			margin-left: 60%;
+			margin-top: 15%;
+			border-radius: 10px;
+			position:relative;
+        }
+        .login-username{
+            width: 74.5%;
+			height:54px;
+			background-color: #fff;
+			border-radius: 10px;
+			position:absolute;
+			top:22.7%;
+			left:12.9%;
+        }
+        .login-username i,.login-password i{
+			display: block;
+			width: 10%;
+			height: 54px;
+			float: left;
+			font-size: 28px;
+			line-height: 54px;
+			text-align: center;	
+			color: #a0a0a0;       
+        }
+        .login-username input,.login-password input{
+			display: block;
+			float: left;
+			width: 90%;
+			height: 54px;
+			border: none;
+			font-size: 22px;
+			border-radius: 0 10px 10px 0;
+			text-align: left;
+			text-indent: 10px;
+			outline: mediumaquamarine;
+			padding: 10px 0;
+        }
+        .login-password{
+            width: 74.5%;
+			height:54px;
+			background-color: #fff;
+			border-radius: 10px;
+			position:absolute;
+			top:45%;
+			left:12.9%;
+        }
+        .loginBtn{
+			width: 74.5%;
+			height: 54px;
+			line-height: 54px;
+			border-radius: 10px;
+			background-color: #188dfb;
+			position: absolute;
+			top: 67%;
+			left: 12.9%;
+			color: white;
+			font-size: 23px;
+			text-align: left;
+			letter-spacing: 50px;
+			text-indent: 129px;
+			cursor: pointer;
+        }
+        .messageOk{
+			width: 30%;
+			height:24%;
+			background-color:rgba(204,204,204,.8);
+			position: absolute;
+			top: 33%;
+			left: 33%;
+			z-index: 666;
+			border-radius: 10px;
+			display:none;
+        }
+        .shopMessageOk{
+			width: 30%;
+			height: 19%;
+			background-color: rgba(204,204,204,1);
+			position: absolute;
+			top: 54%;
+			left: 37%;
+			z-index: 666;
+			border-radius: 10px;
+        }
+        .messageOkText,.shopMessageOkText{
+			width: 100%;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			font-size: 20px;
+			color: #FFF;
+        }
+        .messageOkIf span,.shopMessageOkIf span{
+			width: 60px;
+			height: 30px;
+			display: block;
+			float: left;
+			margin-left: 15px;
+			text-align: center;
+			background: rgb(66, 133, 244);
+			border-radius: 5px;
+/* 			margin-left: 108px; */
+			line-height: 30px;
+			color: #FFF;
+			margin-left: 50px;
+			margin-top: 20px;
+			cursor:pointer;
+        }
+        .messageOkIf span:hover,.shopMessageOkIf span:hover{
+          background: #509bff;
+		  color: #1a258e;        
+        }
+        .backgroundImg-K{
+			width: 900px;
+			height: 450px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 555;
+            display:none;
+        }
+        .msgInfo{
+			width: 74.5%;
+			height: 30px;
+			line-height: 27px;
+			position: absolute;
+			top: 5%;
+			left: 13%;
+			border-radius: 10px;
+			font-size: 16px;
+			letter-spacing: 2px;
+			background-color: #FFF;
+			color: red;
+			border: 1px solid red; 
+			display:none;         
+        }
+        .deskstyleKong{
+          width:100%;
+          height:100%;
+          position:absolute;
+          top:0;
+          left:0;
+          z-index:555;
+          display:none;
+        }
+        .messageContent{
+			display: inline-block;
+			width: 240px;
+			height: 30px;
+			line-height: 30px;
+			text-align: left;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-spacing: normal;
+        }
+        .deskInit{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+           z-index:444;
+           background: url(images/appImgs/deskInitbackGround.png) center ;
+           display:none;
+           }
+           .deskInit>h1{
+				position: absolute;
+				color: #FFF;
+				font-size: 40px;
+				top: 47%;
+				left: 30%;
+				letter-spacing: 3px;
+           }
+           .cotn_principal p{
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				color: rgb(106,90,205);
+				font-size: 20px;
+				position: absolute;
+				top: 35%;
+				letter-spacing: 2px;
+				font-weight: bold;
+           }
+    </style>
+    <style>
+        @-webkit-keyframes myMove /*Safari and Chrome*/
+        {
+            from {left:0px;}
+            to {left:200px;}
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/AdapterScreen.css"/>
+</head>
+
+<body id="deskMain">
+<div class="maskingOut"></div>
+<div class="deskInit"> 
+       <h1>应用商店正在初始化 , 请稍后 ···</h1>    
+</div> 
+<!--登录界面-->
+<div id="loginDesk">
+       <div class="cotn_principal">
+         <div class="login">
+             <div class="login-username">
+                 <i class="iconfont">&#xe639;</i>
+                 <input type="text" title="用户名不能为空！" name="username" id="username" value="luyao"  placeholder="请输入用户名"  maxlength="20" />
+             </div>
+             <div class="login-password">
+                 <i class="iconfont">&#xe62b;</i>
+                 <input type="password" title="密码不能为空！" name="password" id="password" value="admin111111" placeholder="密码" />
+             </div>
+             <div class="loginBtn" onClick="desklogin()" >登录</div>
+             <div class="msgInfo">登陆失败,用户名或密码错误</div> 
+         </div>
+      </div>
+         <!-- ca登录 -->
+<!--           <div class="cotn_principal">
+	         <div class="login">
+		          <div class="caLogin">
+		             	<p>正在验证数据,请稍后...</p>
+		          </div>
+	          </div>
+       	</div> -->  
+      
+         <!-- <div id="showDiv" class="from-below effeckt-show">
+            <div class="cont_centrar">
+                <div class="cont_login">
+                    <div class="cont_info_log_sign_up">
+                        <div class="col_md_login">
+                            <div class="cont_ba_opcitiy">
+                                <h2>中软应用桌面</h2>
+                                <p>插入电子钥匙<br>体验更便捷的登录方式</p>
+                                <button class="btn_login1" onClick="cambiar_login()">账号登录</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cont_back_info">
+                        <div class="cont_img_back_grey"> <img src="login/po.jpg" alt="" /> </div>
+                    </div>
+                    <div class="cont_forms cont_formsStyle">
+                        <div class="cont_img_back_"> <img src="login/po.jpg" alt="" /> </div>
+                        <div class="cont_form_login" style="opacity: 1;position: absolute;width: 640px;height: 280px;z-index: 1;left:-156px;">
+                            <h2>请登录</h2>
+                            <h3 id="msgview">&nbsp;</h3>
+                            <input type="text" title="用户名不能为空！" name="username" id="username" value="luyao"  placeholder="用户名"  maxlength="20" />
+                            <input type="password" title="密码不能为空！" name="password" id="password" value="admin111111" placeholder="密码" />
+
+                            <button class="btn_login2" onClick="desklogin()">登录</button>
+                            <button class="btn_login" onClick="deskquit()">quit</button>
+                        </div>
+                        <div class="cont_form_sign_up">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  -->
+    
+</div>
+
+<!--主桌面界面-->
+<div id="mainDesk" style="position: relative;">
+    <!--顶部人员登陆信息-->
+    <div class="top" style="display: none">
+        <div class="topLeft" >
+            <span class="headPic"><img src="images/appImages/btn_YH.png"></span>
+            <div id="loginUser" class="txt"></div>
+        </div>
+        <div class="topRight">
+           <i id="searchApp"></i>
+        <span onclick="messageCenter();">
+            <a ><img src="images/appImages/btn_XX.png" style="width: 16px;height: 16px;"></a>
+            <i id="messageTopNum" class="topNum">0</i>
+        </span>
+        <span onclick="panelManager();">
+            <a ><img src="images/add_icon.png" style="width: 16px;height: 16px;"></a>
+        </span>
+        <span onclick="openBackground();">
+            <a ><img src="images/appImages/btn_HF.png"></a>
+        </span>
+        </div>
+    </div>
+    <!-- 搜索开始 -->
+    <div class="container">
+        <div id="morphsearch" class="morphsearch">
+            <!--搜索域-->
+            <form class="morphsearch-form">
+                <div style="width: 60%;  margin: 0 auto; height: 90px;margin-top: 5px;">
+                    <input id="search" class="morphsearch-input" type="search" style="width:88%; border: none; width: 88%;font-size: 35px;height: 59px;color: rgba(0,0,0,.5);"  placeholder="搜索内容..."/>
+                    <div id="selectButton">
+                        <button class="morphsearch-submit" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+            <!--条目list区-->
+            <div id="morphsearch-content">
+            	<div class="list-details-content">
+                 	<div class="list-details" id="list-details">
+             	</div>
+            </div>
+       </div>
+	</div>
+   
+    <!-- 搜索结束 -->
+
+    <!--桌面-->
+    <div class="wrapper">
+        <div class="wrapper-content" style="transition-property:transform;transition-timing-function: cubic-bezier(0, 0, 0.25, 1);transition-duration: 350ms;transform: translate3d(0px, 0px, 0px);">
+        </div>
+        <!-- 底部托盘开始 -->
+        <div class="wrapper-footer">
+            <ul id="bottomUl" class="sortable grid">
+            </ul>
+        </div>
+        <!-- 底部托盘结束 -->
+    </div>
+    <!--消息中心管理-->
+    <div class="rightDiv" style="display: block;z-index:20;top: 30px;height:  100%;">
+        <div id="messageButton">
+            <div id="byTime" class="messageSwitch" style="margin-left: 30px;color:#ffffff;"><strong>按时间</strong></div>
+            <div id="byKind" class="messageSwitch" style="color:#ffffff"><strong>按类型</strong></div>
+        </div>
+        <div id="messageList">
+            <ul id="showMessage"></ul>
+        </div>
+    </div>
+    <!--面板管理-->
+    <div id="editPanel" class="panel-show animated lightSpeedIn" style="display: block;z-index:201; top: 23%; height: 280px;">
+        <div class="boxB">
+            <div class="btn_left">
+                <span>&lt;</span>
+            </div>
+            <!-- 将数据取出来存起来 start-->
+            <div class="banner_title">
+               <div class="banner_titleText">编辑面板<span class="banner_titleIcon"></span></div>
+            </div>
+            <div class="banner_hide">
+               <div class="banner_hidden">
+                 <div id="hide_block" style="left: 0px;"></div>
+                </div>
+            </div>
+            <div class="btn_right">
+                <span>&gt;</span>
+            </div>
+        </div>
+    </div>
+	
+    <!-- 背景开始 -->
+    <div id="backgroundImg" class="photo animated lightSpeedIn" style="position:absolute;z-index:102;overflow: hidden;">
+       <div class="backgroundImg-K"></div>
+		<div class="bgTitle" >桌面换肤</div>
+       <span onclick="closeBackground();" class="bgTitle-clone"></span>      
+        <div class="bgKong" style="position:absolute;top:0;left:0;height:60px;width:100%;z-index:4;cursor: move;"></div>
+        <div onclick="changeBackGroundImg(event);"  style="height: 330px;width: 100%;overflow: auto;overflow-x: hidden;overflow-y: scroll;position: absolute;top: 63px;right: -25px;padding-left:0; z-index: 202;">    
+	       
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/bg_default.jpg">
+	        </div>
+	        <div   class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/02.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/17.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/04.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/05.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/06.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/07.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/08.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/09.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/10.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/11.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/12.jpg">
+	        </div>
+	        <div class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/13.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/14.jpg">
+	        </div>
+	        <div class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/13.jpg">
+	        </div>
+	        <div  class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/13.jpg">
+	        </div>
+	        <div class="small_pic">
+	            <div class="img_cover">
+	                <span class="progress"></span>
+	            </div>
+	            <img src="images/13.jpg">
+	        </div>
+	        
+	       </div>
+	       <div class="clear">
+	            <div class="bottomBtn">
+	                <a onclick="openmessageOk();"  href="#"><span class="btn">取消</span></a>
+	            </div>
+	            <div class="bottomBtn BtnOk">
+	                <a onclick="saveBackGroundImg();" href="#"><span class="btn">确定</span></a>
+	            </div>
+       		</div>
+       		<div class="messageOk">
+                 <div class="messageOkText">
+                                                                  是否放弃当前操作
+                 </div>
+                 <div class="messageOkIf">
+                    <span onclick="closeBackground();">是</span>
+                    <span onclick="closemessageOk();" >否</span>
+                 </div>
+			</div>
+		 </div>
+    </div>
+
+    <!--面板索引-->
+    <div id="panelIndexbox">
+        <ul class="img-index"></ul>
+    </div>
+
+    <!-- 底部托盘 样式-->
+    <div class=bottom_box>
+        <div class="tabLeft"></div>
+        <ul id="default_bottom_app">
+        </ul>
+        <div class="tabRight"></div>
+    </div>
+
+    <!--面板切换-->
+    <div class="left" onmouseover="this.className='leftOn'" onmouseout="this.className='left'" id="left_control" style="left: 0px; position: fixed; top:50%;margin-top:-35px;"></div>
+    <div class="right" onmouseover="this.className='rightOn'" onmouseout="this.className='right'" id="right_control" style="right: 0px; position: fixed;top:50%;margin-top:-35px;"></div>
+
+</div>
+<!--桌面商店  -->
+    <div class="deskstyle" id="deskstyle-desk" style="position:absolute;z-index:100;">
+        <div class="deskstyleKong"></div>
+         <div class="deskstyle-top">
+             <div class="deskstyle-top-logo">应用商店</div>
+             <div class="deskstyle-top-title" id="deskstyle-top-title">
+                <input class="inputValue" placeholder="搜索应用" type="text" name="name" />
+                 <i class="iconfont icon" id="searchIcon">&#xe60e;</i>
+                <i class="deskstyle-close"></i>
+                <div class="deskAlertDrag" style="position:absolute;left:0;top:0;height:44px;width:94%;z-index:6; cursor: move;"></div>
+             </div>
+         </div>
+         <div class="menu0" id="menu0">
+	          <ul class="menu1" id="menu1">
+	          </ul>
+	           
+         </div>
+           <i class="iconfont" id="left">&#xf0343;</i>    
+	       <i class="iconfont" id="right">&#xf0344;</i> 
+         <div>
+             <div>
+                <div class="main" id="main0">
+                    <div class="main-middle"></div>
+                </div>
+             </div>
+         </div>
+    </div>
+</div>
+<script src="js/appStoreTab.js"></script>
+<script type="application/javascript" src="js/component.js"></script>
+</body>
+</html>
+<script type="text/javascript" src="js/listenevent.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<script src="js/appstoreAlertDrag.js"></script>
+<script src="js/backgroundAlertDrag.js"></script>
+<script src="js/panelEditAlertDrag.js"></script>
+
+<script type="text/javascript" src="js/listenevent.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript">
+     function search(){
+    	 panelFlag = false;
+	 $(".topRight span").css("backgroundColor","");
+    	   $("#editPanel").hide();
+    		$("#deskstyle-desk").hide();
+    		$("#backgroundImg").hide();
+    		$(".rightDiv").hide();
+        $("#morphsearch").slideToggle(function(){
+        	if($(this).is(":visible")){
+        		$(".topRight span").eq(0).css("backgroundColor","rgba(200, 200, 200, 0.7)");
+        	}else{
+        		$(".topRight span").eq(0).css("backgroundColor","");
+        	}
+        });
+        
+        var keyWord = $("#search").val();
+    	if(!isnull(keyWord)){
+    		$("#search").val('');
+            $("#list-details").empty();
+    	}
+    }
+     function logo_other(obj){
+       try{
+           obj.onerror=null;
+           obj.src='images/error_icon.png';
+           obj.title='未上传';
+       }catch(ex){}
+    }
+    /* 应用初始化 */
+   function showinit(){
+     $(".deskInit").show();	
+    }  
+ /* 登录界面显示 */
+  function showlogin(){
+	  $(".deskInit").hide();
+	  $("#loginDesk").append('<div class="cotn_principal"><div class="login"><div class="login-username"><i class="iconfont">&#xe639;</i><input type="text" onfocus="userC()" title="用户名不能为空！" name="username" id="username" value="luyao"  placeholder="请输入用户名"  maxlength="20" /></div><div class="login-password"><i class="iconfont">&#xe62b;</i><input onfocus="wordC()" type="password" title="密码不能为空！" name="password" id="password" value="admin111111" placeholder="密码" /></div><div class="loginBtn" onClick="desklogin()" >登录</div><div class="msgInfo">登陆失败,用户名或密码错误</div></div></div>')
+ }
+  /* ca界面显示 */
+  function cashow(){
+	  $(".deskInit").hide();
+	  $("#loginDesk").append('<div class="cotn_principal"><div class="login"><div class="caLogin"><p>正在验证数据,请稍后 ···</p></div></div></div>')  
+  }
+</script>
+
+
+
+
+

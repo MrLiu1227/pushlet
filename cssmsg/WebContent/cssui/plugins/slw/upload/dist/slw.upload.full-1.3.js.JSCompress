@@ -1,0 +1,14 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="slw.upload.full-1.3.js">
+    <auto value="0" />
+    <sourcefile path="..\src\slw.upload.js" />
+    <sourcefile path="..\src\slw.upload.main.js" />
+    <sourcefile path="..\src\slw.upload.cmd.js" />
+    <sourcefile path="..\src\slw.upload.view.js" />
+    <sourcefile path="..\src\slw.upload.tmpl.js" />
+    <sourcefile path="..\src\slw.upload.li.js" />
+    <sourcefile path="..\src\slw.upload.pic.js" />
+    <sourcefile path="..\src\slw.upload.table.js" />
+    <sourcefile path="..\src\slw.upload.crop.js" />
+</combinefile>
+</jscompress>

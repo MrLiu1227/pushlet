@@ -1,0 +1,25 @@
+.picThumb1, .picThumb2 {
+	margin: 0;
+	padding: 1px 0;
+}
+
+.picThumb1 li, .picThumb2 li {
+	background-color: #fff;
+	border: 1px solid #acacac;
+	font-size: 14px;
+	text-align: center;
+	list-style-type: none;
+	float: left;
+	margin-left: 10px;
+	padding: 10px;
+	-webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16);
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16);
+}
+
+.picThumb1 li div, .picThumb2 li div {
+	background-color: #fff;
+	border: 1px solid #bbb;
+	margin-bottom: 10px;
+	font-size: 14px;
+	list-style-type: none;
+}

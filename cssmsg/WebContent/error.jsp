@@ -1,0 +1,1 @@
+<%@ page language="java" pageEncoding="utf-8" contentType="text/html; charset=utf-8"%><%@ taglib prefix="ww" uri="webwork"%><ww:if test="#session.message!=null && !#session.message.equals(\"\")"><ww:property value="#session.message" /></ww:if><ww:else>网络或系统异常，请联系系统管理员！</ww:else>

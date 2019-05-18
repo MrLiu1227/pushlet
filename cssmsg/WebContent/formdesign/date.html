@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>日期时间</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="leipi.style.css">
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../dialogs/internal.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/uuid.js"></script>
+</head>
+<body>
+<div class="content">
+	<input type="hidden" name="uuid" id="uuid" />
+    <table class="table table-bordered table-striped table-hover">
+     <tr>
+        <th><span>控件名称</span><span class="label label-important">*</span></th>
+        <th><span>控件描述</span><span class="label label-important">*</span></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="dfname" placeholder="必填项"></td>
+        <td><input type="text" id="title" placeholder="必填项"></td>
+        
+    </tr>
+    <tr>
+        <th><span>数据类型</span> </th>
+        <th><span>默认值</span></th>
+    </tr>
+    <tr>
+        <td>
+             <select id="dfdatatype"></select>
+        </td>
+        <td>
+        	<input type="text" id="value" placeholder="无则不填">
+        </td>
+    </tr>
+    <tr>
+    	<th><span>对齐方式</span> </th>
+        <th><span>长&nbsp;&nbsp;X&nbsp;&nbsp;宽</span> </th>
+    </tr>
+    <tr>
+    	<td>
+            <select id="styletextalign">
+                <option value="left" >左对齐</option>
+                <option value="center">居中对齐</option>
+                <option value="right">右对齐</option>
+            </select>     	
+    	</td>
+        <td>
+            <input id="stylewidth" type="text" value="150" class="input-small span1" placeholder="auto"/>
+            X
+            <input id="styleheight" type="text" value="" class="input-small span1" placeholder="auto"/>
+        </td>
+    </tr>
+    <tr>
+        <th><span>是否必填</span></th>
+        <th><span>显示格式</span></th>
+    </tr>    
+    <tr>
+        <td>
+            <label class="checkbox inline">
+            	<input name="dfisnull" type="radio" checked="checked" value="2" />是
+            </label>
+            <label class="checkbox inline">
+            	<input name="dfisnull" type="radio" value="1" />否  
+           	</label>
+        </td>
+        <td>
+            <input id="dfshowformat" type="text" value="yyyy-MM-dd" class="input-small span1" placeholder="auto" style="width:150px;"/>
+        </td>
+    </tr>
+    </table>
+</div>
+</body>
+</html>

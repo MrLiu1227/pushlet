@@ -1,0 +1,247 @@
+/*=======================图标页面样式========================*/
+.iconspage ul{
+  padding: 20px;
+}
+.iconspage li{
+  float: left;
+  line-height: 32px;
+  width: 180px;
+  margin: 5px 0;
+}
+.iconspage i{
+  display: inline-block;
+  background-image:url(../images/iconpage.png);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  vertical-align: -5px;
+}
+.iconspage [class^="icon_"]:before, .iconspage [class*=" icon_"]:before{
+  /*content: "";*/
+}
+.icon_menu{
+  background-position: -410px -81px;
+}
+.icon_doc{
+  background-position: -410px -124px;
+}
+.icon_list{
+  background-position: -410px -170px;
+}
+.icon_sch{
+  background-position: -410px -213px;
+}
+.icon_tag{
+  background-position: -410px -258px;
+}
+.icon_user{
+  background-position: -410px -304px;
+}
+.icon_setting{
+  background-position: -410px -347px;
+}
+.icon_book{
+  background-position: -410px -392px;
+}
+.icon_mywork{
+  background-position: -410px -436px;
+}
+.icon_like{
+  background-position: -410px -482px;
+}
+.icon_exclamation{
+  background-position: -410px -525px;
+}
+.icon_add{
+  background-position: -410px -570px;
+}
+.icon_star{
+  background-position: -410px -615px;
+}
+.icon_layer  {
+  background-position: -410px -659px;
+}
+.icon_tips{
+  background-position: -410px -702px;
+}
+.icon_question{
+  background-position: -410px -748px;
+}
+.icon_sound{
+  background-position: -410px -792px;
+}
+.icon_date{
+  background-position: -410px -837px;
+}
+.icon_document{
+  background-position: -410px -881px;
+}
+.icon_random{
+  background-position: -410px -926px;
+}
+.icon_refresh{
+  background-position: -410px -970px;
+}
+.icon_hdd{
+  background-position: -410px -571px;
+}
+.icon_docup{
+  background-position: -410px -1057px;
+}
+.icon_docdown{
+  background-position: -410px -1102px;
+}
+.icon_home{
+  background-position: -410px -1147px;
+}
+.icon_arrow_down{
+  background-position: -604px -78px;
+}
+.icon_arrow_up{
+  background-position: -604px -122px;
+}
+.icon_graph_points{
+  background-position: -604px -168px;
+}
+.icon_lamp{
+  background-position: -604px -213px;
+}
+.icon_coins{
+  background-position: -604px -257px;
+}
+.icon_box{
+  background-position: -604px -302px;
+}
+.icon_sharethis{
+  background-position: -604px -346px;
+}
+.icon_organizing{
+  background-position: -604px -391px;
+}
+.icon_station{
+  background-position: -604px -435px;
+}
+.icon_user_add{
+  background-position: -604px -480px;
+}
+.icon_grid{
+  background-position: -604px -525px;
+}
+.icon_adjust{
+  background-position: -604px -569px;
+}
+.icon_magic_wand{
+  background-position: -604px -615px;
+}
+.icon_lock_login{
+  background-position: -604px -658px;
+}
+.icon_map{
+  background-position: -604px -704px;
+}
+.icon_hdd_net{
+  background-position: -604px -746px;
+}
+.icon_three_points{
+  background-position: -604px -792px;
+}
+.icon_settings_off{
+  background-position: -604px -837px;
+}
+.icon_speed{
+  background-position: -604px -881px;
+}
+.icon_diamonds{
+  background-position: -604px -927px;
+}
+.icon_connect_point{
+  background-position: -604px -970px;
+}
+.icon_shield{
+  background-position: -604px -1015px;
+}
+.icon_locked{
+  background-position: -604px -1060px;
+}
+.icon_eye_disabled{
+  background-position: -604px -1105px;
+}
+.icon_key{
+  background-position: -604px -1150px;
+}
+.icon_no_entry{
+  background-position: -800px -78px;
+}
+.icon_pencil{
+  background-position: -800px -122px;
+}
+.icon_links{
+  background-position: -800px -168px;
+}
+.icon_bag{
+  background-position: -800px -215px;
+}
+.icon_sys{
+  background-position: -800px -257px;
+}
+.icon_viewport{
+  background-position: -800px -302px;
+}
+.icon_compass{
+  background-position: -800px -347px;
+}
+.icon_paper_clip{
+  background-position: -800px -392px;
+}
+.icon_document_full{
+  background-position: -800px -437px;
+}
+.icon_pin_location{
+  background-position: -800px -482px;
+}
+.icon_cycling{
+  background-position: -800px -527px;
+}
+.icon_default{
+  background-position: -800px -569px;
+}
+.icon_grade{
+  background-position: -800px -613px;
+}
+.icon_closed{
+  background-position: -800px -658px;
+}
+.icon_plus{
+  background-position: -800px -704px;
+}
+.icon_minus{
+  background-position: -800px -746px;
+}
+.icon_add{
+  background-position: -800px -792px;
+}
+.icon_mail{
+  background-position: -800px -837px;
+}
+.icon_recycle_left{
+  background-position: -800px -881px;
+}
+.icon_recycle_right{
+  background-position: -800px -925px;
+}
+.icon_comments_chat{
+  background-position: -800px -970px;
+}
+.icon_copy_document{
+  background-position: -800px -1015px;
+}
+.icon_bars{
+  background-position: -800px -1060px;
+}
+.icon_sun{
+  background-position: -800px -1105px;
+}
+.icon_windy{
+  background-position: -800px -1150px;
+}

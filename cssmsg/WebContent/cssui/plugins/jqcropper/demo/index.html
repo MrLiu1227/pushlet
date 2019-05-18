@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>jqcropper demo</title>
+<script type="text/javascript" src="jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../../../js/common.js"></script>
+<script type="text/javascript" src="../jqcropper.js?v=93"></script>
+<link type="text/css" href="../jqcropper.css?v=3" rel="stylesheet" />
+
+</head>
+
+<body>
+	<form class="form-horizontal form-validate" id="jqcropperDemoForm">
+		<h1>jqcropper Demo</h1>
+
+		<div class="row" style="width: 900px">
+			<div class="col-md-9">
+				<div class="crop-wrapper" style="width: 650px; height: 460">
+					<img src="1.jpg" />
+				</div>
+			</div>
+			<div class="col-md-3">
+				<button type="button" class="btn btn-primary crop-posInfo">坐标</button>
+				<button type="button" class="btn btn-primary crop-open">预览</button>
+				<button type="button" class="btn btn-primary crop-fileInfo">文件</button>
+				<div class="crop-preview preview0" style="width: 180px;"></div>
+				<div class="crop-preview preview1" style="width: 120px;"></div>
+				<div class="pull-left" style="margin-top: 10px;">
+					<textarea id="cropData" rows="6" cols="30"></textarea>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+<script>
+	$(document).ready(function() {
+		var $cropForm = $('#jqcropperDemoForm');
+		var $cropPreview = $cropForm.find('.crop-preview');
+		var imgCrop = $cropForm.find('.crop-wrapper img').jqcropper({
+			preview : $cropPreview,
+			userListener : myListener
+		});
+		function myListener(data) {
+			var str = '';
+			$.each(data, function(key, val) {
+				str += key + ': ';
+				str += val + '\n';
+			})
+			$cropForm.find('#cropData').html(str);
+		}
+		
+		$cropForm.find('.crop-posInfo').click(function() {
+			myListener(imgCrop.getCropPos());
+		})
+		$cropForm.find('.crop-open').click(function() {
+			window.open(imgCrop.getCropPosData());
+		})
+		$cropForm.find('.crop-fileInfo').click(function() {
+			var file = imgCrop.getFile();
+			if (file == null)
+				alert('请先选择文件！');
+			else
+				alert(file.name);
+		})
+
+	});
+</script>
+
+</html>

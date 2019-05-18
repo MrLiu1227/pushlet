@@ -1,0 +1,8 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="jqupload.js">
+<sourcefile path=".\src\crop.js" />
+<sourcefile path=".\src\ieupload.js" />
+<sourcefile path=".\src\method.js" />
+<sourcefile path=".\src\upload.js" />
+</combinefile>
+</jscompress>

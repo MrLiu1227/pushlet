@@ -1,0 +1,19 @@
+.ke-content, .ke-content p, .ke-content br, .ke-content div,
+	.ke-content span {
+	word-break: break-all;
+	word-wrap: break-word;
+	font: 16px/30px "Microsoft Yahei";
+	color: #404040;
+	text-indent: 2em;
+	margin: 10px 0 10px 0px;
+}
+
+.ke-content img {
+	max-width: 755px;
+	width: expression(this.width > 755 ? 755 : true);
+}
+
+.ke-content table {
+	max-width: 850%;
+	width: expression(this.width > 850 ? 850 : true);
+}

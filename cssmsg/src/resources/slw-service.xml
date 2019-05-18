@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slw-service>
+    <slwControllers>
+        <service class="com.css.app.base.attachconfig.action.AttachconfigController"/>
+        <service class="com.css.app.base.attachment.action.AttachmentController"/>
+        <service class="com.css.apps.base.column.action.SColumnController"/>
+        <service class="com.css.apps.base.user.login.LoginController"/>
+        <service class="slw.demo.SlwDemoController"/>
+        <service class="com.css.app.personalmsg.action.PersonalMsgController"/>
+        <service class="com.css.app.recycled.action.RecycledMsgController"/>
+
+
+    </slwControllers>
+    <slwRestServices>
+        <service class="slw.rest.server.resource.UserResource"/>
+    </slwRestServices>
+</slw-service>

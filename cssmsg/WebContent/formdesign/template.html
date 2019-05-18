@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>表单模板</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <meta name="generator" content="www.leipi.org" />
+    <script type="text/javascript" src="../dialogs/internal.js"></script>
+    <style type="text/css">
+.wrap{ padding: 5px;font-size: 14px;}
+.left{float: left;min-width: 540px;}
+.right{width:160px;border: 1px solid #ccc !important;position: fixed;padding: 5px;right:0px;}
+.right .pre{height: 332px;overflow-y: auto;}
+.right .preitem{border: white 1px solid;margin: 5px 0;padding: 2px 0;}
+.right .preitem:hover{background-color: lemonChiffon;cursor: pointer;border: #ccc 1px solid;}
+.right .preitem img{display: block;margin: 0 auto;width:100px;}
+.clear{clear: both;}
+.top{height:26px;line-height: 26px;padding: 5px;}
+.bottom{height:320px;width:100%;margin: 0 auto;}
+.transparent{ background: url("template/images/bg.gif") repeat;}
+.bottom table tr td{border:1px dashed #ccc;}
+#colorPicker{width: 17px;height: 17px;border: 1px solid #CCC;display: inline-block;border-radius: 3px;box-shadow: 2px 2px 5px #D3D6DA;}
+.border_style1{padding:2px;border: 1px solid #ccc;border-radius: 5px;box-shadow:2px 2px 5px #d3d6da;}
+p{margin: 5px 0}
+table{clear:both;margin-bottom:10px;border-collapse:collapse;word-break:break-all;}
+li{clear:both}
+ol{padding-left:40px; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left">
+            <div class="top">
+                <label><var id="lang_template_clear">保留原有内容</var>：<input id="issave" type="checkbox"></label>
+            </div>
+            <div class="bottom border_style1" id="preview"></div>
+        </div>
+        <fieldset id="fieldset" class="right border_style1">
+            <legend><var id="lang_template_select"></var></legend>
+            <div class="pre" id="preitem"></div>
+        </fieldset>
+        <div class="clear"></div>
+    </div>
+    <script type="text/javascript">
+/**
+* Templates.
+* 添加模板，以下面配置即可
+*/
+var templates = [
+    {
+        "pre":"pre0.png",//预览图
+        'title':"表单设计器模板",//标题
+        //预览html
+        'preHtml':'<p style="text-align: center;"><span style="font-size: 24px;">示例</span></p><hr/>表单设计器模板，注意控件：name="leipiNewField"',
+        //确认后到编辑器的html
+        "html":'<p style="text-align: center;"><span style="font-size: 24px;">示例</span></p><hr/>表单设计器模板，注意控件：name="leipiNewField"'
+    },
+    {
+        "pre":"pre5.png",
+        'title':"模板一",
+        'preHtml':'<table width="100%" border="0" cellspacing="0" cellpadding="0" data-sort="sortDisabled">    <tbody>        <tr class="firstRow"><td class="fild">    部门/单位：</td><td>    <input name="c6768a7b12100001e82e1130174010d1" id="c6768a7b12100001e82e1130174010d1" type="text" dfplugintype="text" dfdatatype="8" dfname="title" title="部门/单位" value="" dfisnull="2" dfminlength="1" dfmaxlength="50" styletextalign="left" stylewidth="78" style="width:78px;"/></td><td class="fild">    请 假 &nbsp;人：</td><td>    <input name="c6768c5cf09000016c2511a0d4c01e90" id="c6768c5cf09000016c2511a0d4c01e90" type="text" dfplugintype="text" dfdatatype="8" dfname="draft" title="请假人" value="" dfisnull="2" dfminlength="1" dfmaxlength="20" styletextalign="left" stylewidth="78" style="width:78px;"/></td><td class="fild">    请假日期：</td><td align="left">    <input name="c6768c7778a00001a573171012392d70" id="c6768c7778a00001a573171012392d70" type="text" dfplugintype="date" dfdatatype="4" dfname="draftTime" title="拟稿日期" value="" dfisnull="2" dfshowformat="yyyy-MM-dd" class="Wdate" onclick="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" styletextalign="left" stylewidth="116" style="width:116px;"/></td>        </tr>        <tr><td class="fild">    联系电话：</td><td>    <input name="c67740c2bf000001f4179b501aa71f40" id="c67740c2bf000001f4179b501aa71f40" type="text" dfplugintype="text" dfdatatype="5" dfname="phone" title="联系电话" value="" dfisnull="2" dfminlength="1" dfmaxlength="15" styletextalign="left" stylewidth="78" style="text-align: left; width: 78px;"/></td><td class="fild">    请假期限：</td><td colspan="3" align="center">    <input name="c6768d4eac3000017e8daed06a1030e0" id="c6768d4eac3000017e8daed06a1030e0" type="text" dfplugintype="date" dfdatatype="4" dfname="limit" title="开始日期" value="" dfisnull="2" dfshowformat="yyyy-MM-dd" class="Wdate" onclick="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" styletextalign="left" stylewidth="116" style="width: 116px;"/>&nbsp;&nbsp;至&nbsp;&nbsp;<input name="c6768d4eac3000017e8daed06a1030e1" id="c6768d4eac3000017e8daed06a1030e1" type="text" dfplugintype="date" dfdatatype="4" dfname="limit" title="结束日期" value="" dfisnull="2" dfshowformat="yyyy-MM-dd" class="Wdate" onclick="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" styletextalign="left" stylewidth="116" style="width: 116px;"/></td>        </tr>        <tr><td class="fild">    事 &nbsp; &nbsp; &nbsp; 由：</td><td colspan="5" width="549px" align="left">    <textarea id="c6768dd83fc00001812f758d1611e710" name="c6768dd83fc00001812f758d1611e710" dfname="memo" title="附注" dfplugintype="textarea" dfdatatype="2" value="" dfisnull="1" dfminlength="1" dfmaxlength="300" styletextalign="left" stylewidth="545" styleheight="" rows="3" class="textarea_bor_b" style="text-align: left; width: 545px;"></textarea></td>        </tr>    </tbody></table>',
+        "html":'<table width="100%" border="0" cellspacing="0" cellpadding="0" data-sort="sortDisabled">    <tbody>        <tr class="firstRow"><td class="fild">    部门/单位：</td><td>    <input name="c6768a7b12100001e82e1130174010d1" id="c6768a7b12100001e82e1130174010d1" type="text" dfplugintype="text" dfdatatype="8" dfname="title" title="部门/单位" value="" dfisnull="2" dfminlength="1" dfmaxlength="50" styletextalign="left" stylewidth="78" style="width:78px;"/></td><td class="fild">    请 假 &nbsp;人：</td><td>    <input name="c6768c5cf09000016c2511a0d4c01e90" id="c6768c5cf09000016c2511a0d4c01e90" type="text" dfplugintype="text" dfdatatype="8" dfname="draft" title="请假人" value="" dfisnull="2" dfminlength="1" dfmaxlength="20" styletextalign="left" stylewidth="78" style="width:78px;"/></td><td class="fild">    请假日期：</td><td align="left">    <input name="c6768c7778a00001a573171012392d70" id="c6768c7778a00001a573171012392d70" type="text" dfplugintype="date" dfdatatype="4" dfname="draftTime" title="拟稿日期" value="" dfisnull="2" dfshowformat="yyyy-MM-dd" class="Wdate" onclick="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" styletextalign="left" stylewidth="116" style="width:116px;"/></td>        </tr>        <tr><td class="fild">    联系电话：</td><td>    <input name="c67740c2bf000001f4179b501aa71f40" id="c67740c2bf000001f4179b501aa71f40" type="text" dfplugintype="text" dfdatatype="5" dfname="phone" title="联系电话" value="" dfisnull="2" dfminlength="1" dfmaxlength="15" styletextalign="left" stylewidth="78" style="text-align: left; width: 78px;"/></td><td class="fild">    请假期限：</td><td colspan="3" align="center">    <input name="c6768d4eac3000017e8daed06a1030e0" id="c6768d4eac3000017e8daed06a1030e0" type="text" dfplugintype="date" dfdatatype="4" dfname="limit" title="开始日期" value="" dfisnull="2" dfshowformat="yyyy-MM-dd" class="Wdate" onclick="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" styletextalign="left" stylewidth="116" style="width: 116px;"/>&nbsp;&nbsp;至&nbsp;&nbsp;<input name="c6768d4eac3000017e8daed06a1030e1" id="c6768d4eac3000017e8daed06a1030e1" type="text" dfplugintype="date" dfdatatype="4" dfname="limit" title="结束日期" value="" dfisnull="2" dfshowformat="yyyy-MM-dd" class="Wdate" onclick="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" styletextalign="left" stylewidth="116" style="width: 116px;"/></td>        </tr>        <tr><td class="fild">    事 &nbsp; &nbsp; &nbsp; 由：</td><td colspan="5" width="549px" align="left">    <textarea id="c6768dd83fc00001812f758d1611e710" name="c6768dd83fc00001812f758d1611e710" dfname="memo" title="附注" dfplugintype="textarea" dfdatatype="2" value="" dfisnull="1" dfminlength="1" dfmaxlength="300" styletextalign="left" stylewidth="545" styleheight="" rows="3" class="textarea_bor_b" style="text-align: left; width: 545px;"></textarea></td>        </tr>    </tbody></table>'
+
+    },
+    {
+        "pre":"pre6.png",
+        'title':"模板二",
+        'preImg':'pre6.png',
+        "html":'<table width="100%" border="0" cellspacing="0" cellpadding="0" data-sort="sortDisabled">    <tbody>  <tr class="firstRow">  <td colspan="6" align="right" class="whmar"><em class="txt_red">发文字号：</em><input name="c6768a30c08000014a11107012d33b10" id="c6768a30c08000014a11107012d33b10" type="text" dfplugintype="text" dfdatatype="8" dfname="fwword" title="发文字号" value="" dfisnull="2" dfminlength="1" dfmaxlength="20" styletextalign="left" stylewidth="150"/>  </td>  </tr>  <tr>  <td class="fild" width="87px">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：  </td>  <td colspan="5" width="549px" align="left"><input name="c6768a7b12100001e82e1130174010d1" id="c6768a7b12100001e82e1130174010d1" type="text" dfplugintype="text" dfdatatype="8" dfname="title" title="标题" value="" dfisnull="2" dfminlength="1" dfmaxlength="50" styletextalign="left" stylewidth="532" style="width:532px;"/>  </td>  </tr>  <tr>  <td class="fild" width="87px">文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;种：  </td>  <td width="100px"><select id="c6768a95f6a00001ea4e43506d00ba30" name="c6768a95f6a00001ea4e43506d00ba30" dfname="type" title="文种" dfplugintype="select" dfdictname="fw_d_type" dfisnull="2" onchange="setDefaultValue(this)" class="input-small"><option value="">请选择</option><option value="1">令</option><option value="10">批复</option><option value="11">意见</option><option value="12">函</option><option value="13">纪要</option><option value="14">答复</option><option value="15">简函</option><option value="16">汇报</option><option value="2">决定</option><option value="3">公告</option><option value="4">通告</option><option value="5">通知</option><option value="6">通报</option><option value="7">议案</option><option value="8">报告</option><option value="9">请示</option></select>  </td>  <td class="fild" width="87px">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：  </td>  <td width="105px"><select id="c6768ab0d8a00001e3a9e20314d09160" name="c6768ab0d8a00001e3a9e20314d09160" dfname="security" title="密级" dfplugintype="select" dfdictname="fw_d_security_level" dfisnull="2" onchange="setDefaultValue(this)" class="input-small"><option value="">请选择</option><option value="1">秘密</option><option value="2">机密</option><option value="3">绝密</option><option value="4">非密</option></select>  </td>  <td class="fild" width="76px">保密期限：  </td>  <td width="144px" align="left"><input name="c6768acc89200001104ffd809a00cbb0" id="c6768acc89200001104ffd809a00cbb0" type="text" dfplugintype="text" dfdatatype="8" dfname="period" title="保密期限" value="" dfisnull="2" dfminlength="1" dfmaxlength="10" styletextalign="left" stylewidth="116" style="width:116px;"/>  </td>  </tr>  <tr>  <td class="fild">紧急程度：  </td>  <td><select id="c6768c4bd050000174cd1f402277b100" name="c6768c4bd050000174cd1f402277b100" dfname="level" title="紧急程度" dfplugintype="select" dfdictname="fw_d_emergency_type" dfisnull="2" onchange="setDefaultValue(this)" class="input-small"><option value="">请选择</option><option value="1">特急</option><option value="2">加急</option></select>  </td>  <td class="fild">拟&nbsp;&nbsp;稿&nbsp;&nbsp;人：  </td>  <td><input name="c6768c5cf09000016c2511a0d4c01e90" id="c6768c5cf09000016c2511a0d4c01e90" type="text" dfplugintype="text" dfdatatype="8" dfname="draft" title="拟稿人" value="" dfisnull="2" dfminlength="1" dfmaxlength="20" styletextalign="left" stylewidth="78" style="width:78px;"/>  </td>  <td class="fild">拟稿日期：  </td>  <td align="left"><input name="c6768c7778a00001a573171012392d70" id="c6768c7778a00001a573171012392d70" type="text" dfplugintype="date" dfdatatype="4" dfname="draftTime" title="拟稿日期" value="" dfisnull="2" dfshowformat="yyyy-MM-dd" class="Wdate" onclick="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" styletextalign="left" stylewidth="116" style="width:116px;"/>  </td>  </tr>  <tr>  <td class="fild">联系电话：  </td>  <td colspan="3"><input name="c67740c2bf000001f4179b501aa71f40" id="c67740c2bf000001f4179b501aa71f40" type="text" dfplugintype="text" dfdatatype="5" dfname="phone" title="联系电话" value="" dfisnull="2" dfminlength="1" dfmaxlength="15" styletextalign="left" stylewidth="165" style="text-align: left; width: 165px;"/>  </td>  <td class="fild">办理期限：  </td>  <td align="left"><input name="c6768d4eac3000017e8daed06a1030e0" id="c6768d4eac3000017e8daed06a1030e0" type="text" dfplugintype="date" dfdatatype="4" dfname="limit" title="办理期限" value="" dfisnull="2" dfshowformat="yyyy-MM-dd" class="Wdate" onclick="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;})" styletextalign="left" stylewidth="116" style="width:116px;"/>  </td>  </tr>  <tr>  <td class="fild">主办单位：  </td>  <td colspan="5" width="549px" align="left"><span dfplugintype="org" id="c677dda1a6e00001b3fb18ee1ef01b40" name="c677dda1a6e00001b3fb18ee1ef01b40" dfname="dept" title="主办单位" dfisnull="1" dfismult="1"><input type="button" onclick="" value="选择机构"/><span id="orglist"><input type="hidden" name="orgs"/></span></span>  </td>  </tr>  <tr>  <td class="fild">主送机关：  </td>  <td colspan="5" width="549px" align="left"><span dfplugintype="org" id="c677dda71e600001e4561dd64011e060" name="c677dda71e600001e4561dd64011e060" dfname="lorddept" title="主送机关" dfisnull="1" dfismult="2"><input type="button" onclick="" value="选择机构"/><span id="orglist"><input type="hidden" name="orgs"/></span></span>  </td>  </tr>  <tr>  <td class="fild">抄送机关：  </td>  <td colspan="5" width="549px" align="left"><span dfplugintype="org" id="c677ddaaa10000017f601a3010a34c40" name="c677ddaaa10000017f601a3010a34c40" dfname="copydept" title="抄送机关" dfisnull="1" dfismult="2"><input type="button" onclick="" value="选择机构"/><span id="orglist"><input type="hidden" name="orgs"/></span></span>  </td>  </tr>  <tr>  <td class="fild">附&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：  </td>  <td colspan="5" width="549px" align="left"><textarea id="c6768dd83fc00001812f758d1611e710" name="c6768dd83fc00001812f758d1611e710" dfname="memo" title="附注" dfplugintype="textarea" dfdatatype="2" value="" dfisnull="1" dfminlength="1" dfmaxlength="300" styletextalign="left" stylewidth="545" styleheight="" rows="3" class="textarea_bor_b" style="text-align: left; width: 545px;"></textarea>  </td>  </tr>  <tr>  <td class="fild" colspan="6" style="text-align:left;padding-left:20px;">附&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;件：<span dfplugintype="file" id="c6768e92239000015c5d6620171732a0" name="c6768e92239000015c5d6620171732a0" dfname="attach" title="附件" dfmaxsize="20" dffilecount="10" dfuploadformat="" dfisnull="2" dfdatatype="8" unselectable="on"><span id="filelist"></span><input unselectable="on" class="upload" type="button" onclick="" value="上传" dfmaxsize="20" dffilecount="10" dfuploadformat="" dfisnull="2"/></span>  </td>  </tr>    </tbody></table><p>    <br/></p>'
+
+    }
+];
+
+/**
+ *  Templates.
+ */
+(function () {
+    var me = editor,
+            preview = $G( "preview" ),
+            preitem = $G( "preitem" ),
+            tmps = templates,
+            currentTmp;
+    var initPre = function () {
+        var str = "";
+        for ( var i = 0, tmp; tmp = tmps[i++]; ) {
+            str += '<div class="preitem" onclick="pre(' + i + ')"><img src="' + "images/template/" + tmp.pre + '" ' + (tmp.title ? "alt=" + tmp.title + " title=" + tmp.title + "" : "") + '></div>';
+        }
+        preitem.innerHTML = str;
+    };
+    var pre = function ( n ) {
+        var tmp = tmps[n - 1];
+        currentTmp = tmp;
+        clearItem();
+        domUtils.setStyles( preitem.childNodes[n - 1], {
+            "background-color":"lemonChiffon",
+            "border":"#ccc 1px solid"
+        } );
+        if(tmp.preImg){
+	        preview.innerHTML = '<img src="' + "images/template/" + tmp.preImg + '" ' + (tmp.title ? "alt=" + tmp.title + " title=" + tmp.title + "" : "") + '>';
+        }else{
+	        preview.innerHTML = tmp.preHtml ? tmp.preHtml : "";
+        }
+    };
+    var clearItem = function () {
+        var items = preitem.children;
+        for ( var i = 0, item; item = items[i++]; ) {
+            domUtils.setStyles( item, {
+                "background-color":"",
+                "border":"white 1px solid"
+            } );
+        }
+    };
+    dialog.onok = function () {
+        if ( !$G( "issave" ).checked ){
+            me.execCommand( "cleardoc" );
+        }
+        var obj = {
+            html:currentTmp && currentTmp.html
+        };
+        me.execCommand( "template", obj );
+    };
+    initPre();
+    window.pre = pre;
+    pre(2);
+    
+    var fieldset = $G("fieldset");
+    fieldset.addEventListener("mouseover",function(){
+    	fieldset.style.opacity=1;
+    	fieldset.style.right="0px";
+    });
+    fieldset.addEventListener("mouseout",function(){
+    	fieldset.style.opacity=0.5;
+    	fieldset.style.right="-140px";
+    });
+
+})();
+    </script>
+</body>
+</html>

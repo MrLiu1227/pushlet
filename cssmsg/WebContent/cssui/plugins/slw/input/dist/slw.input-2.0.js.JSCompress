@@ -1,0 +1,12 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="slw.input-2.0.js">
+    <auto value="0" />
+    <sourcefile path="..\src\slw.tree.js" />
+    <sourcefile path="..\src\slw.complete.js" />
+    <sourcefile path="..\src\slw.select.js" />
+    <sourcefile path="..\src\slw.tag.js" />
+    <sourcefile path="..\src\slw.cascadestep.js" />
+    <sourcefile path="..\src\slw.cascade.js" />
+    <sourcefile path="..\src\slw.spinner.js" />
+</combinefile>
+</jscompress>

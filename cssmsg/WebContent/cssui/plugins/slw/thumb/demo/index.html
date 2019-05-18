@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>slwThumb demo</title>
+<script type="text/javascript" src="jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../../main/slw.js"></script>
+<script type="text/javascript" src="../slw.thumb.js"></script>
+<link href="../style/thumb.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<h1>slwThumb Demo</h1>
+	<h2>左上角截取</h2>
+	<ul id="thumb_demo1" class="picThumb1">
+		<li class="pic-element" data-url="1.jpg">这是图片1</li>
+		<li class="pic-element" data-url="2.jpg">这是图片2</li>
+		<li class="pic-element" data-url="3.jpg">这是图片3</li>
+		<li class="pic-element" data-url="4.jpg">这是图片4</li>
+	</ul>
+	<div style="clear: both"></div>
+	<h2>中部截取</h2>
+	<ul id="thumb_demo2" class="picThumb2">
+		<li class="pic-element" data-url="1.jpg">这是图片1</li>
+		<li class="pic-element" data-url="2.jpg">这是图片2</li>
+		<li class="pic-element" data-url="3.jpg">这是图片3</li>
+		<li class="pic-element" data-url="4.jpg">这是图片4</li>
+	</ul>
+	<script>
+		$(document).ready(function() {
+			var options1 = {
+				thumbW : 100,
+				thumbH : 150,
+				fitType : 'fixed'
+			};
+			$('#thumb_demo1').slwThumb(options1);
+			
+			var options2 = {
+				thumbW : 200,
+				thumbH : 100,
+				fitType : 'scale'
+			};
+			$('#thumb_demo2').slwThumb(options2);
+		});
+	</script>
+</body>
+</html>

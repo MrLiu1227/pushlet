@@ -1,0 +1,262 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	background-color: #317caf;
+	overflow: hidden;
+}
+
+html, body {
+	height: 100%;
+}
+
+.login-wrapper {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+.login-content {
+	width: 750px;
+	height: 750px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	background-image: url("images/bg.jpg");
+	background-repeat: no-repeat;
+	text-align: left;
+}
+
+.help {
+	width: 0;
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.login-middle, .login-left {
+	float: left;
+	height: 100%;
+	overflow: hidden;
+}
+
+.login-middle {
+	width: 100%;
+}
+
+.middle-body {
+	height: 100%;
+	margin: 0 0 0 310px;
+}
+
+.login-left {
+	width: 300px;
+	margin-left: -100%;
+}
+
+.login-left .left-body {
+	width: 155px;
+	height: 190px;
+	margin-left: 120px;
+	margin-top: 300px;
+	background-image: url("images/l_icon.png");
+	background-repeat: no-repeat;
+	height: 190px;
+	margin-left: 120px;
+	margin-top: 300px;
+}
+
+.middle-body form {
+	padding-left: 40px;
+	padding-top: 140px;
+	overflow: hidden;
+}
+
+.middle-body .title {
+	margin-top: 55px;
+	margin-bottom: 25px;
+	font-size: 34px;
+	color: #ffffff;
+	line-height: 45px;
+}
+
+.middle-body form .wel_txt {
+	font-size: 18px;
+	margin-bottom: 15px;
+	color: #d0dde9;
+}
+
+.middle-body  p input, .middle-body p span, .middle-body  p i {
+	display: inline-block;
+}
+
+.middle-body p, .middle-body p span, .middle-body p i {
+	background-image: url("images/new_icon.png");
+	background-repeat: no-repeat;
+}
+
+.middle-body p {
+	height: 42px;
+	margin-bottom: 25px;
+	width: 350px;
+	background-position: -130px 0px;
+}
+
+.middle-body p input {
+	font-size: 14px;
+	border: 0;
+	outline: none;
+	text-indent: 10px;
+	width: 170px;
+	color: #999999;
+	vertical-align: 15px;
+	margin: 0 5px;
+	-webkit-box-shadow: none;
+}
+
+.middle-body .password input {
+	vertical-align: 14px;
+}
+
+.middle-body p.auth input {
+	border-right: 1px solid #cfd0d2;
+}
+
+.middle-body p.rmb {
+	background: none;
+	height: auto;
+}
+
+.middle-body p span.type {
+	width: 42px;
+	height: 42px;
+	background-color: #c8c8c8;
+}
+
+.middle-body p.account span.type {
+	background-position: 12px 12px;
+}
+
+.middle-body p.password span.type {
+	background-position: 12px -26px;
+}
+
+.middle-body p.auth span.type {
+	background-position: 12px -64px;
+}
+
+.middle-body p i {
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: -12px;
+}
+
+.middle-body p i.valid {
+	background-position: -72px 0px;
+}
+
+.middle-body p i.invalid {
+	background-position: -72px -39px;
+}
+
+.middle-body p i.refresh {
+	background-position: -72px -78px;
+}
+
+.middle-body p.auth input {
+	width: 100px;
+}
+
+.middle-body p.auth span.code {
+	display: inline-block;
+	margin-left: 2px;
+	margin-right: 5px;
+	vertical-align: 11px;
+}
+
+.middle-body p.auth span img {
+	vertical-align: baseline;
+}
+
+.middle-body p.rmb span {
+	margin-left: 20px;
+	height: 24px;
+	line-height: 24px;
+	background: none;
+	overflow: hidden;
+	cursor: pointer;
+	color: #dcddde;
+}
+
+.middle-body p.rmb span i {
+	margin-top: 6px;
+	margin-right: 7px;
+	width: 14px;
+	height: 14px;
+	background-position: -518px -29px;
+}
+
+.middle-body p.rmb span input {
+	margin-top: 6px;
+	width: 14px;
+	height: 14px;
+}
+
+.middle-body .btn {
+	float: left;
+	background: none;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.middle-body a {
+	background-image: url("images/new_icon.png");
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	width: 75px;
+	height: 32px;
+	line-height: 30px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 14px;
+	outline: none;
+	margin-right: 15px;
+	text-decoration: none;
+}
+
+.middle-body a.submit {
+	background-position: -130px -51px;
+}
+
+.middle-body a.reset {
+	background-position: -220px -51px;
+}
+
+.middle-body a.submit:hover, .middle-body a.reset:hover {
+	background-position: -310px -51px;
+}
+
+.middle-body .msg {
+	font-size: 14px;
+	color: #FFE500;
+	text-align: left;
+	position: relative;
+	top: -55px;
+	left: 280px;
+	height: 0;
+}
+
+.middle-body label.error {
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+.clear-fix {
+	clear: both;
+}

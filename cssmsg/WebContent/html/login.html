@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+
+    <link rel="stylesheet" href="login/css/style.css">
+    <link rel="stylesheet" href="login/css/showdiv.css">
+</head>
+
+<body>
+    <div class="cotn_principal">
+        <div id="showDiv" class="from-below effeckt-show">
+            <div class="cont_centrar">
+                <div class="cont_login">
+                    <div class="cont_info_log_sign_up">
+                        <div class="col_md_login">
+                            <div class="cont_ba_opcitiy">
+                                <h2>DESKTOP</h2>
+                                <p>插入电子钥匙<br>体验更便捷的登录方式</p>
+                                <button class="btn_login" onClick="cambiar_login()">登录</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cont_back_info">
+                        <div class="cont_img_back_grey"> <img src="login/po.jpg" alt="" /> </div>
+                    </div>
+                    <div class="cont_forms">
+                        <div class="cont_img_back_"> <img src="login/po.jpg" alt="" /> </div>
+                        <div class="cont_form_login">
+                            <h2>请登录</h2>
+                            <h3 id="msgview">&nbsp;</h3>
+                            <input type="text" title="用户名不能为空！" maxlength="20" name="username" id="username" value="luyao" placeholder="用户名" />
+                            <input type="password" title="密码不能为空！" name="password" id="password" value="admin111111" placeholder="密码" />
+
+                            <button class="btn_login" onClick="desklogin()">登录</button>
+                            <!-- <button class="btn_login" onClick="deskquit()">quit</button> -->
+                        </div>
+                        <div class="cont_form_sign_up">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login/js/cssui.min.js"></script>
+    <script src="login/js/desklogin.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/globle_env.js"></script>
+</body>
+
+</html>
+<script>
+    (function(win) {
+        cambiar_login();
+        $(".cont_form_login").keydown(keyDownSearch);
+    })(window);
+</script>

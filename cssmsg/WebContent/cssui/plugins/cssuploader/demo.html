@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/default.css" rel="stylesheet" />
+  	<script type="text/javascript" src="../jquery-1.10.2.min.js"></script>
+   	<script type="text/javascript" src="js/file.js"></script>
+    <script type="text/javascript" src="js/cssuploader.js"></script>
+    <script type="text/javascript" src="js/default.js"></script>         
+
+       
+ 	</head>
+<body>
+	
+	<div id="drag-and-drop-zone" style="margin:10px;" class="uploadZone">
+			<div class="browser">
+	       <label>
+	         <span>浏览文件（或拖拽文件到上传区域）</span>
+	         <input type="file" name="files[]" style="display:none" multiple="multiple" title='浏览文件'>
+	       </label>
+	     </div>
+			<div id="uploadFileDiv">
+				<table class="table table-bordered" style="width:100%" id="uploadFileTable">
+					<tr class="header">
+						<th width="60px">预览</th>
+				   	 	<th>名称</th>
+				   	 	<th width="300px">进度</th>
+					</tr>
+				</table>
+			</div>
+	  </div>
+<script type="text/javascript">
+
+			
+jQuery(document).ready(function() {
+	var setting={
+    url: 'res.html',
+    extraData: {},
+    dataType: 'json',
+	  maxFileSize: 100 * 1024 * 1024,
+    onComplete: function(){
+    	$css.tip('所有文件上传完成');
+    }
+  };
+  setting = $.extend(defaultSetting, setting);
+  $cssUploader.init('drag-and-drop-zone',setting);
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>cssviewer demo</title>
+<script type="text/javascript" src="jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../../main/slw.js"></script>
+<script type="text/javascript" src="../../thumb/slw.thumb.js"></script>
+<script type="text/javascript" src="../dist/slw.viewer.full-2.1.min.js"></script>
+<link href="../../thumb/style/thumb.css" type="text/css" rel="stylesheet" />
+<link href="../style/viewer.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<h1>slwViewer Demo</h1>
+	<h2>左上角截取缩略图</h2>
+	<ul id="thumb_demo1" class="picThumb1">
+		<li class="pic-element" data-url="1.jpg">这是图片1</li>
+		<li class="pic-element" data-url="2.jpg">这是图片2</li>
+		<li class="pic-element" data-url="3.jpg">这是图片3</li>
+		<li class="pic-element" data-url="4.jpg">这是图片4</li>
+	</ul>
+	<div style="clear: both"></div>
+	<h2>中部截取缩略图,可以点击调图片浏览插件</h2>
+	<ul id="thumb_demo2" class="picThumb2">
+		<li class="pic-element" data-url="1.jpg">这是图片1</li>
+		<li class="pic-element" data-url="2.jpg">这是图片2</li>
+		<li class="pic-element" data-url="3.jpg">这是图片3</li>
+		<li class="pic-element" data-url="4.jpg">这是图片4</li>
+		<li class="pic-element" data-url="1.jpg">这还是图片1</li>
+	</ul>
+	<div id="layer"></div>
+
+	<script>
+		$(document).ready(function() {
+			
+			var options1 = {
+				thumbW : 100,
+				thumbH : 150,
+				fitType : 'fixed'
+			};
+			$('#thumb_demo1').slwThumb(options1);
+			
+			var options2 = {
+				thumbW : 200,
+				thumbH : 100,
+				fitType : 'scale'
+			};
+			$('#thumb_demo2').slwThumb(options2);
+			
+			var options3 = {
+				picClass : 'pic-element',
+				picData : 'data-url',
+				picThumb : 'data-url',
+				picTitle : 'data-url',
+				loading : '../style/loading.gif'
+			};
+			$('#thumb_demo1').slwViewer(options3);
+			
+			var options4 = {
+				picClass : 'pic-element',
+				picData : 'data-url',
+				picThumb : 'data-url',
+				picTitle : 'data-url',
+				thumbW : 100,
+				thumbH : 50,
+				loading : '../style/loading.gif'
+			};
+			$('#thumb_demo2').slwViewer(options4);
+			
+		});
+	</script>
+</body>
+</html>

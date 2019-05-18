@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+<meta charset="utf-8" />
+<script type="text/javascript" src="../../../jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../main/slw.js"></script>
+<script type="text/javascript" src="../../main/slw.validator.js"></script>
+<script type="text/javascript" src="../slw.color.js"></script>
+<link href="../style/color.css" type="text/css" rel="stylesheet" />
+</HEAD>
+
+<body>
+	<input name="color1" id="color1" value="#000000" />
+	<input name="color2" id="color2" />
+	<input name="color3" id="color3" />
+	<input name="color4" id="color4" />
+	<br />
+	<select name="userType" id="userType">
+		<option value=""></option>
+		<option value="1">管理员</option>
+		<option value="2">用户</option>
+	</select>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#color1').slwColor();
+			$('#color2').slwColor({
+				color : '#ff0000'
+			});
+			$('#color3').slwColor();
+			$('#color4').slwColor({
+				lang : 0
+			});
+		});
+	</script>
+</body>
+</HTML>
