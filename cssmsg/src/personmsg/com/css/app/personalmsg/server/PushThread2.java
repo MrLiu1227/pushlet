@@ -61,7 +61,9 @@ public class PushThread2 extends Thread {
             event.setField("who",aSubject);
             event.setField("date",new Date().toString());
             // 推送消息
-            Dispatcher.getInstance().multicast(event); // 一对一
+            Dispatcher.getInstance().multicast(event); // 所有的订阅者,要保证所有订阅者的sessionid不同才能保证所有订阅者都接收到相同的消息，不出现轮流接收的现象
+            //Dispatcher.getInstance().unicast(event, thisSessionId);// 一对一
+            //Dispatcher.getInstance().broadcast(event);//所有包括未订阅的
             System.out.println(new Date()+"发送了消息");
 
         }
